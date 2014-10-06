@@ -30,7 +30,7 @@ Her er en trinn-for-trinn beskrivelse av alt man må gjøre for å lage en oppga
 5. Fyll ut `problem.md`
 6. Legg ev. bilder i `images`
 7. Lag ett eller flere eksempeltestcaser. Gi testcasene filnavn på formen `X.sample.in` og `X.sample.out` og legg dem i mappen `samples`.
-8. Lag testcaser. Gi testcasene filnavn på formen `X.in` og `X.out` og legg dem i mappen `testcases`
+8. Lag testcaser. Gi testcasene filnavn på formen `X.in` og `X.out` og legg dem i mappen `testdata`
 9. Lag én eller flere løsningsforslag. Det kan være en god idé å lage løsninger som er for trege eller feil. Skriv `@EXPECTED_RESULTS@: CORRECT` som en kommentar øverst i løsningskoden. Bytt  `CORRECT` med `TIMEOUT` eller `WRONG-ANSWER` etter hva som passer. Dette brukes til automatisk testing.
 10. Fyll ut `solution.md`
 
