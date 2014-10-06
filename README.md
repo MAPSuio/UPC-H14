@@ -6,6 +6,14 @@ For de som er med i oppgavegruppa er det to arbeidsoppgaver her inne:
 - Lage oppgaver
 - Lese/verifisere/lage løsninger oppgaver
 
+## Inspirasjon
+Oppgavene til UPC skal være enklere enn til NCPC. Målgruppen er primært studenter som nå går tredjesemester, og de mest interesserte av førsteårsstudentene.
+
+Av 12 oppgaver ønsker vi at en gjennomsnittlig tredjesemester-/flink førstesemesterstudent skal klare rundt seks oppgaver. De neste seks oppgavene kan være vanskeligere, og det meningen at ingen skal klare/rekke å gjøre alle oppgavene.
+
+Se [fjorårets oppgaver](https://github.com/MAPSuio/python-challenge-2014/blob/master/README.md) fra MAPS Python Challenge, eller tidligere [NCPC-oppgaver](https://ncpc.idi.ntnu.no) for inspirasjon.
+
+
 ## Hvordan lage en oppgave
 En oppgave består i hovedsak av en oppgavetekst som bl.a. definerer et input- og outputformat, og et sett med testcaser som besvarelser skal valideres mot.
 
