@@ -5,7 +5,7 @@ A friend of yours, suitably nicknamed Average Joe, is known for annoying everyon
 
 Lately Joe's been posing questions about averaging binary numbers, which is even more annoying. Not only is getting binary questions annoying, but he demands you answer them in binary as well! Needless to say; you've had enough of wasting time on Joe's questions, and decided to write a program that can answer these questions automatically.
 
-It turns out there is a pattern in Joe's questions; he's always asking for the average of two binary numbers, where the first number has _n_ binary digits, and the second number always is a multiple of 2<sup>n</sup>.
+It turns out there is a pattern in Joe's questions; he's always asking for the average of two binary numbers, where the first number has _n_ binary digits, and the second number always is a multiple of 2<sup>n</sup>. Since the numbers are binary, Joe doesn't care for decimals, so just round the answer down to the nearest integer.
 
 ## Input
 The first line of input contains two integers _n_ and _m_, the number of binary digits in the two numbers respectively.
