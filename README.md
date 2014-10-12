@@ -47,3 +47,13 @@ Hvis oppgaven er ment å skulle løses med en bestemt algoritme (med en gitt kom
 __Algoritme/problemsjanger__: Triksing med binære tall  
 __Forfatter__: martinvl  
 __Løst av__: martinvl
+
+### [The pinmaker](pinmaker)
+__Algoritme/problemsjanger__: Evaluering av differenslikning  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
+### [The pinmaker 2](pinmaker2)
+__Algoritme/problemsjanger__: Evaluering av differenslikning (i O(log n)))  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
