@@ -109,8 +109,11 @@ def build_problem(probdir, report_errors=False):
 
     files = ' '.join(['tmp/domjudge-problem.ini',
         'tmp/problem.html',
-        'tmp/%s' % solution,
-        'tmp/too-slow.py*',
+        'tmp/*.py',
+        'tmp/*.py3',
+        'tmp/*.java',
+        'tmp/*.c',
+        'tmp/*.cpp',
         'tmp/*.in',
         'tmp/*.out'])
 
