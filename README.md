@@ -13,6 +13,30 @@ Av 12 oppgaver ønsker vi at en gjennomsnittlig tredjesemester-/flink førstesem
 
 Se [fjorårets oppgaver](https://github.com/MAPSuio/python-challenge-2014/blob/master/README.md) fra MAPS Python Challenge, eller tidligere [NCPC-oppgaver](https://ncpc.idi.ntnu.no) for inspirasjon.
 
+Noen idéer til oppgaver:
+
+- En veldig enkel oppgave (a la QueroPark)
+- Topologisk sortering, fotballkamper (Joakim)
+- Korteste vei something (Ola)
+- Leftist/fibonacci heap, sykehuskø + sammenslåing
+- Bredde-først, stengte gater i Kristiansand
+- Noe numerisk, integrasjon, derivasjon etv.
+- Grid, maks antall steg, vanskelig
+- Krig (kortspill)
+- Matching
+- Packing
+- Myntspill (Ola)
+- Noe med parsing av ASCII-art
+
+## Judgeserver
+Til gjennomføringen av konkurransen kommer vi til å bruke [DOMJudge](https://domjudge.org). DOMJudge lar deg laste opp kildekoden til en løsning, som kompileres og kjøres mot testcasene.
+
+Vi har en server kjørende med oppgavene fra MAPS Python Challenge fra i fjor pluss noen nye oppgaver. På denne serveren kan dere se hvordan det fungerer for deltakerne, og laste opp nye oppgaver for å teste.
+
+Serveradresse: [https://178.62.242.80](https://178.62.242.80) (sertifikatet er selvsignert)
+
+Admin-bruker; `admin`, passord: `ech748`  
+Deltaker-bruker: `foo`, passord: `foo`
 
 ## Hvordan lage en oppgave
 En oppgave består i hovedsak av en oppgavetekst som bl.a. definerer et input- og outputformat, og et sett med testcaser som besvarelser skal valideres mot.
@@ -35,6 +59,17 @@ Her er en trinn-for-trinn beskrivelse av alt man må gjøre for å lage en oppga
 10. Fyll ut `solution.md`
 
 Legg oppgaven inn i listen under når du er ferdig med punktene over!
+
+### Hvordan laste opp en oppgave
+Når alle punktene over er på plass, kan oppgaven pakkes og klargjøres for DOMJudge ved hjelp av `util/build_problem.py`. Stå i roten av repoet og kjør f.eks. `python util/build_problem.py bitmean` for å bygge problemet `bitmean`. Resultatet er en zip-fil med samme navn som problemet, som legges i mappen `build`.
+
+Deretter:
+
+1. Logg inn på DOMJudge-serveren med infoen som står over 
+2. Gå til `Problems`
+3. Velg zip-filen med file-pickeren helt nederst på siden og trykk upload
+
+For å laste opp ny versjon av et problem må den gamle slettes først.
 
 ## Hvordan lage testcaser
 Testcasene skal (ideelt) faile alle løsninger som ikke oppfyller alle kravene i oppgaveteksten. Dette betyr at alle edgecaser bør sjekkes av testcasene.
