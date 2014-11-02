@@ -1,3 +1,7 @@
+/*
+# @EXPECTED_RESULTS@: CORRECT
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
