@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}
+\begin{comment}
+:Title: A complete graph
+:Tags: Foreach;Graphs;To paths
+:Author: Jean-Noël Quintin
+:Slug: complete-graph
+\end{comment}
+\usetikzlibrary[topaths]
+\begin{document}
+\begin{tikzpicture}
+\tikzstyle{vertex}  = [circle, fill=black!10]
+\tikzstyle{selected vertex}  = [vertex, fill=red!10]
+\tikzstyle{edge}    = [-, black, line width=1pt]
+\tikzstyle{selected edge}    = [edge, red!100]
+
+\fill[black!20] (-1, -4.5) -- (6, -4.5)
+    .. controls (6.5, -2) and (8, -3) .. (8, -1.7)
+    .. controls (8,-1) and (7.5,-0.55) .. (7.5, -0.5)
+    .. controls (7,0) and (6.5,0.2) .. (6.2, 1)
+    .. controls (6.1, 1.2) and (5.8, 3) .. (6, 4.5)
+    -- (-1, 4.5) -- (-1, 4.5);
+
+\node           (v1) at (1, 0.2) {Trondheim};
+\node           (v18) at (1, 3) {(quidditch)};
+\node           (v19) at (10, 3) {(no quidditch)};
+\node[vertex]   (v3) at (2, -1) {Ola};
+\node[vertex]   (v4) at (2.7, .3) {Nils};
+\node[vertex]   (v5) at (2, 1.2) {Leif};
+\node[vertex]   (v6) at (5, -1) {Marie};
+\node[vertex]   (v7) at (5, 1) {Johnny};
+\node[vertex]   (v8) at (5, 3) {Mikkel};
+\node[vertex]   (v9) at (5, -3) {Solveig};
+\node[vertex]   (v10) at (7, 2.5) {Preben};
+\node[vertex]   (v11) at (9.5, 1) {Wilhelm};
+\node[vertex]   (v12) at (7, -1.5) {Harald};
+\node[vertex]   (v13) at (8, -3) {Pia};
+\node[vertex]   (v14) at (9, -0.5) {Svein};
+\node[vertex]   (v15) at (10.5, -1) {Mats};
+\node           (v2) at (11, 0) {Oslo};
+
+\draw[red, thick, dashed] (9.8, 0) circle (2);
+\draw[red, thick, dashed] (1.5, 0) circle (2);
+
+\draw[edge]             (v4) -- (v5);
+\draw[edge]             (v3) -- (v6);
+\draw[edge]             (v3) -- (v7);
+\draw[edge]             (v3) -- (v9);
+\draw[edge]             (v4) -- (v7);
+\draw[edge]             (v6) -- (v9);
+\draw[edge]             (v5) -- (v8);
+\draw[edge]             (v5) -- (v7);
+\draw[edge]             (v7) -- (v8);
+\draw[edge]             (v10) -- (v11);
+\draw[edge]             (v10) -- (v8);
+\draw[edge]             (v9) -- (v12);
+\draw[edge]             (v6) -- (v12);
+\draw[edge]             (v7) -- (v12);
+\draw[edge]             (v12) -- (v14);
+\draw[edge]             (v13) -- (v14);
+\draw[edge]             (v13) -- (v15);
+\draw[edge]             (v14) -- (v15);
+
+\draw[blue, thick, dashed] (6, -4.5) .. controls (6.5, -2) and (8, -3) .. (8, -1.7)
+    .. controls (8,-1) and (7.5,-0.55) .. (7.5, -0.5)
+    .. controls (7,0) and (6.5,0.2) .. (6.2, 1)
+    .. controls (6.1, 1.2) and (5.8, 3) .. (6, 4.5);
+
+\end{tikzpicture}
+\end{document}

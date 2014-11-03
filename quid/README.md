@@ -1,5 +1,5 @@
-# <problem title>
-Problem author: <problem author>
+# Quidditch breakup
+Problem author: Martin Vonheim Larsen
 
 [Problem text](problem.md)
 
