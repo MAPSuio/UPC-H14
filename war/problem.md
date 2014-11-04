@@ -30,9 +30,10 @@ It is a draw when both players "lose" in the same round.
 * output one of PLAYER1, PLAYER2 or draw.
 
 ## Constraints
-* n is even, 1 < n < 1000 (May be highened when the solving efficiency is known)
+* 0 &le; n, m &le; 500
 * multiple cards may carry the same k
-* k is positive: 0 < k < 1*10^5
+* k is positive: 0 &le; k &le; 10<sup>5</sup>
+* If no winner is decided within 100 000 iterations, they call it a draw.
 
 ## Sample input
 ```

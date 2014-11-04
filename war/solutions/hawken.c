@@ -56,6 +56,7 @@ int test(testcase *t) {
     queue p1stack, p2stack, p1bet, p2bet;
     qe *p1card = NULL, *p2card = NULL, *tmp;
     int i, j;
+    unsigned long long iterations = 0;
 
     q_i(&p1stack);
     q_i(&p2stack);
@@ -98,6 +99,7 @@ int test(testcase *t) {
                 q_in(&p2stack, tmp);
             q_in(&p2stack, p1card);
         }
+	iterations++;
     }
     i = p1stack.start != NULL ? 1 : 0;
     j = p2stack.start != NULL ? 1 : 0;
@@ -105,6 +107,8 @@ int test(testcase *t) {
     while((tmp = q_rem(&p1bet)))   free(tmp);
     while((tmp = q_rem(&p2stack))) free(tmp);
     while((tmp = q_rem(&p1stack))) free(tmp);
+
+    fprintf(stderr, "DEBUG: iterations: %llu\n", iterations);
 
     if(i == 0 && j == 0) {
         return  0; // draw
