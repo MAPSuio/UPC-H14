@@ -136,11 +136,11 @@ void printcase(testcase *t, int ret, const char *prefix) {
     snprintf(fname, sizeof(fname), "%s-%06i.out", prefix, no);
     fp = fopen(fname, "w");
     if(ret == 1)
-	    fprintf(fp, "PLAYER1\n");
+	    fprintf(fp, "you\n");
     else if(ret == 0)
 	    fprintf(fp, "draw\n");
     else if(ret == -1)
-	    fprintf(fp, "PLAYER2\n");
+	    fprintf(fp, "mike\n");
     fclose(fp);
 
     no++;

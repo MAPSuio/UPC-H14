@@ -61,6 +61,6 @@ while len(p1stack) and len(p2stack):
 if (not len(p1stack) and not len (p2stack)) or iter >= 100000:
     print "draw"
 elif not len(p1stack):
-    print "PLAYER2"
+    print "mike"
 else:
-    print "PLAYER1"
+    print "you"

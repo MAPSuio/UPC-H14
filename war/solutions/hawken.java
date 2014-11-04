@@ -61,9 +61,9 @@ public class hawken {
         if(p1stack.peek() == null && p2stack.peek() == null) {
             System.out.println("draw");
         } else if(p1stack.peek() != null) {
-            System.out.println("PLAYER1");
+            System.out.println("you");
         } else /* if(p2stack.peek() != null) */ {
-            System.out.println("PLAYER2");
+            System.out.println("mike");
         }
     }
 }

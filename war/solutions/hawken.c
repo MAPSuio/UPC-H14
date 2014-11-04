@@ -137,8 +137,8 @@ int main(){
     i = test(&t);
     switch(i) {
         case  0: printf("draw\n");    break;
-        case  1: printf("PLAYER1\n"); break;
-        case -1: printf("PLAYER2\n"); break;
+        case  1: printf("you\n"); break;
+        case -1: printf("mike\n"); break;
     }
 
     free(t.p1a);

@@ -1,39 +1,41 @@
 # War
-![](<path to image here>)
+![](../images/war.jpg)
 
-<needs more story>
+Your son Mike is a really great kid but he loves to play the classic card game war.
+The problem is that he wants to play it with you.
+You find the game a bit boring since there are no choices in the game, given a sequence of cards in a card deck it is always possible to calculate who the winner is going to be.
+You quickly decide to code a program that given a sequence of cards, calculates the course of a game of war. The program should output the player that won.
 
-War is a card game where the outcome is completely dependent on the state at the start at the game, so instead of actually playing it, PLAYER1 and PLAYER2 wanted you to make a program that played it for them automatically.
+War consists of rounds, where each round consists of the following steps:
+* Each player draws a card from the top of the stack and puts it on the table.
+* The player with the higher card wins and collects all cards on the table.
+* If the cards are equal, the cards remain on the table, and the players draw three new cards from their stack and place them face down on the table.
+* The first player to lose all of his/her cards lose the game.
+* If the players lose their cards at the same round or grow tired of the game, it's a draw.
 
-PLAYER1 and PLAYER2 have divided their cards, and the stacks of cards are described to you in the input. PLAYER1 has n cards and PLAYER2 has m cards. The cards are in the order from top to bottom of the stack, so the first card PLAYER1 will draw is card _n0_ and the first card PLAYER2 will draw is card _m0_.
+When a player wins cards, they are placed on the bottom of the stack in this order:
+* The winning player places his/her own cards, the card which was placed first on the table goes first.
+* The winning player then places the opponents cards back into the stack the same way.
 
-The game starts by PLAYER1 and PLAYER2 each drawing a card from their stacks and comparing them. The player with the highest number takes both cards. If the cards are equal, PLAYER1 and PLAYER2 take three cards each from their stack and place them face down. Then they draw two new cards and compare them. The player with the highest card wins all 10 cards. If they are still equal, another 6 cards are placed face down and another 2 cards are drawn to compare. The winner takes all 18 cards. If they are equal, this process continues.
+If the game goes on for 100 000 rounds or more, they get tired and call it a draw.
 
-When a player wins a card, it is placed at the bottom of the winning players stack.
-
-<create scheme for deciding the order when cards are put together like that>
-Temporarily
-* the winning player's cards are placed into his/her stack, with the first card that entered the board as the first card into the stack
-* The losing player's cards are then inserted the same way.
-
-The first player to lose all his/her cards lose the game. Find out if the game will end with PLAYER1 winning, PLAYER2 winning or a draw, or (maybe) if the game is infinite (hopefully not)
-
-It is a draw when both players "lose" in the same round.
+You are given your and Mike's stack as input, and your program will print the name of the winner.
 
 ## Input
-* n - number of cards for PLAYER1
-* m - number of cards for PLAYER2
-* n cards, each with value k
-* m cards, each with value k
+* n - number of cards in your stack
+* m - number of cards in Mike's stack
+* n cards, each with value k, k0 being the top of the stack
+* m cards, each with value k, k0 being the top of the stack
 
 ## Output
-* output one of PLAYER1, PLAYER2 or draw.
+* output one of you, mike or draw.
+* TODO: DEPRECATED: PLAYER1 = you, PLAYER2 = mike
 
 ## Constraints
 * 0 &le; n, m &le; 500
-* multiple cards may carry the same k
-* k is positive: 0 &le; k &le; 10<sup>5</sup>
-* If no winner is decided within 100 000 iterations, they call it a draw.
+* multiple cards may carry the same value k
+* 0 &le; k &le; 10<sup>5</sup>
+* If there are 100 000 rounds or more, they call it a draw.
 
 ## Sample input
 ```
@@ -42,6 +44,23 @@ It is a draw when both players "lose" in the same round.
 2 3 1
 1 2 3
 ```
+
+## Sample gameplay
+
+* Your stacks at the beginning: [2 3 1] and [1 2 3]
+* You draw 2, Mike draws 1, you win.
+* [3 1 2 1] and [2 3]
+* You draw 3, Mike draws 2, you win.
+* [1 2 1 3 2] and [3]
+* You draw 1, Mike draws 3, Mike wins.
+* [2 1 3 2] and [3 1]
+* You draw 2, Mike draws 3, Mike wins.
+* [1 3 2] and [1 3 2]
+* You draw 1, Mike draws 1
+* You try to draw three cards but your stack runs empty
+* Mike tries to draw three cards, but his stack also runs empty
+* It's a draw.
+##
 
 ## Sample output
 ```
@@ -58,5 +77,5 @@ draw
 
 ## Sample output
 ```
-PLAYER1
+you
 ```
