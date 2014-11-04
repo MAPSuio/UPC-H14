@@ -6,15 +6,14 @@ iphone = ()
 
 for line in stdin:
     name, value = line.split()
-    record = (-float(value), name)
+    record = (float(value), name)
 
     if name == 'iPhone':
         iphone = record
 
     prizes.append(record)
 
-prizes.sort()
-p = prizes.index(iphone)
+p = sorted(prizes, reverse=True).index(iphone)
 
 if p:
     print p + 1
