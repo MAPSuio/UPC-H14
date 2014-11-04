@@ -29,7 +29,6 @@ You are given your and Mike's stack as input, and your program will print the na
 
 ## Output
 * output one of you, mike or draw.
-* TODO: DEPRECATED: PLAYER1 = you, PLAYER2 = mike
 
 ## Constraints
 * 0 &le; n, m &le; 500
@@ -60,7 +59,6 @@ You are given your and Mike's stack as input, and your program will print the na
 * You try to draw three cards but your stack runs empty
 * Mike tries to draw three cards, but his stack also runs empty
 * It's a draw.
-##
 
 ## Sample output
 ```
