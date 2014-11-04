@@ -83,6 +83,21 @@ __Algoritme/problemsjanger__: Triksing med binære tall
 __Forfatter__: martinvl  
 __Løst av__: martinvl
 
+### [Festival area](festival)
+__Algoritme/problemsjanger__: Areal av polygon  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
+### [The Fibonacci Rabbits](fibez)
+__Algoritme/problemsjanger__: Fibonacci  
+__Forfatter__: hennilu  
+__Løst av__: hennilu
+
+### [Kristiansand road work](kristian)
+__Algoritme/problemsjanger__: BFS korteste vei  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
 __Forfatter__: martinvl  
@@ -92,3 +107,23 @@ __Løst av__: martinvl
 __Algoritme/problemsjanger__: Evaluering av differenslikning (i O(log n)))  
 __Forfatter__: martinvl  
 __Løst av__: martinvl
+
+### [The prize commitee](prize)
+__Algoritme/problemsjanger__: Sortering, finne element  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
+### [Quidditch breakup](quid)
+__Algoritme/problemsjanger__: Min cut  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
+### [Walking the dog](walk)
+__Algoritme/problemsjanger__: Problemløsning/analyse  
+__Forfatter__: olalia  
+__Løst av__:
+
+### [War](war)
+__Algoritme/problemsjanger__: Simulere kortspillet krig  
+__Forfatter__: hawken  
+__Løst av__: hawken
