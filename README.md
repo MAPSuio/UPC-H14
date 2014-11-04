@@ -83,6 +83,11 @@ __Algoritme/problemsjanger__: Triksing med binære tall
 __Forfatter__: martinvl  
 __Løst av__: martinvl
 
+### [Artificial three-year-old](artifi)
+__Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
+__Forfatter__: martinvl  
+__Løst av__: martinvl
+
 ### [Festival area](festival)
 __Algoritme/problemsjanger__: Areal av polygon  
 __Forfatter__: martinvl  
