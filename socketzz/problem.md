@@ -1,7 +1,7 @@
 # Something something network
 ![](../images/X.jpg)
 
-<Oppgavetekst>
+Oppgavetekst
 
 ## Input
 
@@ -16,8 +16,8 @@ See the protocol design. Message sent to server must match this design.
 
 ## Sample input
 ```
-12 (input field 1)
-4 (input field 2)
+12
+4
 ```
 
 ## Sample output
