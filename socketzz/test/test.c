@@ -15,7 +15,7 @@ unsigned long hash(unsigned char *str) {
 
 int main() {
 	
-	char a = (char) 0x0 + 65;
+	char a = (char) 0x12 + 65;
 	char b = (char) 0x04 + 65;
 
 	char* s = "alittlestring";
