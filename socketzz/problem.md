@@ -22,5 +22,5 @@ See the protocol design. Message sent to server must match this design.
 
 ## Sample output
 ```
-32364475
+885177715
 ```
