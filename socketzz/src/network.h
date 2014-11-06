@@ -1,5 +1,5 @@
-#ifndef L1_PHYS_H
-#define L1_PHYS_H
+#ifndef NETWORK
+#define NETWORK
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
