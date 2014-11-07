@@ -1,5 +1,5 @@
-# <problem title>
-Problem author: <problem author>
+# Happy birthday to you
+Joakim Lindquister
 
 [Problem text](problem.md)
 
