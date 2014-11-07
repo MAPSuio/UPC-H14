@@ -84,6 +84,7 @@ void net_handle_event(void) {
 	int kind = msg->type;
 
 	if (kind == HELLO) {
+		_INFO("Got HELLO from client at X");
 		retval = hello(&src_addr, addrlen, buffer);
 			
 	} else if (kind == GET) {
@@ -112,7 +113,7 @@ void net_handle_event(void) {
  * Called when we recieve a msg->type HELLO. Used for testing the protocol.
  *
  */
-int hello(struct sockaddr_in* addr, socklen_t addlen) {
+int hello(struct sockaddr_in* addr, socklen_t addrlen) {
 	
 	char* sendbuf;
 	char* text = "Hello!";
