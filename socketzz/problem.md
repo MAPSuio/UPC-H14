@@ -1,4 +1,4 @@
-# Something something network
+# Something something network..
 ![](../images/X.jpg)
 
 Applications in 2014 often requeres to communicate with either servers, or 
@@ -25,7 +25,7 @@ Your program should output the key you got from the server.
 Our server is using the protocol described here. It is important that you use 
 the same length of all fields, and send then via network order endian if 
 neasesary. 
-![](protocol.png)
+![](protocol.png =750x100)
 
 ## Sample input
 ```
