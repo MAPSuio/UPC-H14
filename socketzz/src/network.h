@@ -17,8 +17,6 @@ struct __attribute__((__packed__)) Protocol
 	uint8_t type;
 	uint8_t input1;
 	uint8_t input2;
-	//uint32_t client_id;
-	//char[0] hash; // start pointer for hash
 };
 typedef struct Protocol net_message_t;
 
@@ -39,5 +37,5 @@ size_t net_send(struct sockaddr_in* addr, socklen_t addrlen,  const char* buf, i
 void net_handle_event(void);
 
 
-#endif /* L1_PHYS_H */
+#endif
 

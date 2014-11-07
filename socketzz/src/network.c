@@ -15,10 +15,10 @@ int local_mac_address;
 
 /**
  * Called at the start of the program. Initializes data structures
- * like an operating system would do at boot time.
+ * and binding a socket to the specified port.
  *
  * local_port is the port that for the local UDP socket that is used for all 
- * communication.
+ * communication. Given in main()
  *
  * This function initializes a socket for the server.
  */
@@ -71,6 +71,8 @@ void net_handle_event(void) {
 	recvd_bytes = recvfrom(my_udp_socket, &buffer, sizeof(buffer), 0,
 			(struct sockaddr*) &src_addr, &addrlen);
 
+	_INFO("Got %d bytes from client X", recvd_bytes);
+
 	if (recvd_bytes < 0) {
 		_ERR("Failed to recv data:");
 		perror("recvfrom()");
@@ -81,10 +83,10 @@ void net_handle_event(void) {
 	net_message_t* msg = (net_message_t*) buffer;
 	int kind = msg->type;
 
-	//	if (msg->msg_type == HELLO) {
-	// send back hello, used for testing
-
-	if (kind == GET) {
+	if (kind == HELLO) {
+		retval = hello(&src_addr, addrlen, buffer);
+			
+	} else if (kind == GET) {
 		retval = reply_hash(&src_addr, addrlen, buffer);
 		if (retval < 0) {
 
@@ -94,13 +96,41 @@ void net_handle_event(void) {
 	}
 
 	else if (kind == ANSWER) {
+
 		// used for testing 
 	} else {
+
+
+		_ERR("Got jibberish from client X");
 
 		// protocoll error send back error 
 
 	}
 }
+
+/**
+ * Called when we recieve a msg->type HELLO. Used for testing the protocol.
+ *
+ */
+int hello(struct sockaddr_in* addr, socklen_t addlen) {
+	
+	char* sendbuf;
+	char* text = "Hello!";
+	size_t msg_length = strlen(text) + sizeof(net_message_t);
+
+	sendbuf = malloc(msg_length);
+	net_message_t* reply_msg = (net_message_t*) sendbuf;
+
+
+	reply_msg->total_size = (uint8_t) msg_length;
+	reply_msg->type = HELLO; // maybe add a HELLORPLY
+	memcpy(&sendbuf[sizeof(net_message_t), text, strlen(text)]);
+
+	int rv = net_send(addr, addrlen, sendbuf, msg_length);
+	free(sendbuf);
+	return rv;
+}
+
 
 /**
  * Called when we recive msg_type GET. This function
