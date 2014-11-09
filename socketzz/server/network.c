@@ -140,13 +140,13 @@ int reply_hash(struct sockaddr_in* addr, socklen_t addrlen, const char* buf) {
 	char a = msg->input1 + 65;
 	char b = msg->input2 + 65;
 
-	char* s = "alittlestring";
+	char* s = "alittlestring" + a + b;
 	char* input = malloc(strlen(s) + 2);
 	sprintf(input,"%s%c%c", s, a, b);
 
 	char key[256 - sizeof(net_message_t)];
 	sprintf(key, "%lu", hash(s));
-    printf("KEY: %s\n", key);
+    printf("%s\n", key);
 	size_t msg_length = strlen(key) + sizeof(net_message_t);
 
 	char* sendbuf = (char*) malloc(msg_length);
