@@ -10,7 +10,6 @@
 #include "log.h"
 
 int my_udp_socket = -1;
-int local_mac_address;
 
 
 /**
@@ -96,9 +95,7 @@ void net_handle_event(void) {
 	else if (kind == ANSWER) {
 		// used for testing 
 	} else {
-
 		// protocoll error send back error 
-
 	}
 }
 

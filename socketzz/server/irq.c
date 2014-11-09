@@ -46,7 +46,6 @@ void handle_events(void) {
 				 */
 				if(FD_ISSET(my_udp_socket, &read_set)) {
 					net_handle_event();
-
 				}
 				break;
 		}
