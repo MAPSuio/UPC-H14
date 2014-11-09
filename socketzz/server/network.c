@@ -70,7 +70,7 @@ void net_handle_event(void) {
 	recvd_bytes = recvfrom(my_udp_socket, &buffer, sizeof(buffer), 0,
 			(struct sockaddr*) &src_addr, &addrlen);
 
-	_INFO("Got %d bytes from client X", recvd_bytes);
+	_DEBUG("Got %d bytes from client X", recvd_bytes);
 
 	if (recvd_bytes < 0) {
 		_ERR("Failed to recv data:");
@@ -83,7 +83,7 @@ void net_handle_event(void) {
 	int kind = msg->type;
 
 	if (kind == HELLO) {
-		_INFO("Got HELLO from client at X");
+		_DEBUG("Got HELLO from client at X");
 		retval = hello(&src_addr, addrlen, buffer);
 			
 	} else if (kind == GET) {
@@ -120,7 +120,7 @@ int hello(struct sockaddr_in* addr, socklen_t addrlen) {
 
 	reply_msg->total_size = (uint8_t) msg_length;
 	reply_msg->type = HELLO; // maybe add a HELLORPLY
-	memcpy(&sendbuf[sizeof(net_message_t), text, strlen(text)]);
+	memcpy(&sendbuf[sizeof(net_message_t)], text, strlen(text));
 
 	int rv = net_send(addr, addrlen, sendbuf, msg_length);
 	free(sendbuf);
@@ -142,10 +142,11 @@ int reply_hash(struct sockaddr_in* addr, socklen_t addrlen, const char* buf) {
 
 	char* s = "alittlestring";
 	char* input = malloc(strlen(s) + 2);
-	sprintf(input,"%s%c%c\0", s, a, b);
+	sprintf(input,"%s%c%c", s, a, b);
 
 	char key[256 - sizeof(net_message_t)];
-	sprintf(key, "%d\0", hash(s));
+	sprintf(key, "%lu", hash(s));
+    printf("KEY: %s\n", key);
 	size_t msg_length = strlen(key) + sizeof(net_message_t);
 
 	char* sendbuf = (char*) malloc(msg_length);
