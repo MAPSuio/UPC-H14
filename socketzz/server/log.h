@@ -23,12 +23,12 @@
 
 
 #ifdef DEBUG
-	#define _DEBUG(...) do { \
-		fprintf(stderr, BLUE "%17s:" GREEN "%-4d - " CYAN "%-25s" \
-				KWHT, __FILE__, __LINE__, __FUNCTION__); \
-		fprintf(stderr, ##__VA_ARGS__); \
-		fprintf(stderr, "\n"); \
-	} while (0);
+#define _DEBUG(...) do { \
+    fprintf(stderr, BLUE "%17s:" GREEN "%-4d - " CYAN "%-25s" \
+            KWHT, __FILE__, __LINE__, __FUNCTION__); \
+    fprintf(stderr, ##__VA_ARGS__); \
+    fprintf(stderr, "\n"); \
+} while (0);
 #else
 	#define _DEBUG(...)
 #endif

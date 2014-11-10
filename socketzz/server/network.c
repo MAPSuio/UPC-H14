@@ -70,7 +70,7 @@ void net_handle_event(void) {
 	recvd_bytes = recvfrom(my_udp_socket, &buffer, sizeof(buffer), 0,
 			(struct sockaddr*) &src_addr, &addrlen);
 
-	_DEBUG("Got %d bytes from client X", recvd_bytes);
+	_DEBUG("Got %d bytes from client X", (int) recvd_bytes);
 
 	if (recvd_bytes < 0) {
 		_ERR("Failed to recv data:");
@@ -139,13 +139,14 @@ int reply_hash(struct sockaddr_in* addr, socklen_t addrlen, const char* buf) {
 	net_message_t* msg = (net_message_t*) buf;
 	char a = msg->input1 + 65;
 	char b = msg->input2 + 65;
+    printf("A: %c\tB: %c\n", a, b);
 
-	char* s = "alittlestring" + a + b;
+	char* s = "alittlestring";
 	char* input = malloc(strlen(s) + 2);
 	sprintf(input,"%s%c%c", s, a, b);
 
 	char key[256 - sizeof(net_message_t)];
-	sprintf(key, "%lu", hash(s));
+	sprintf(key, "%lu", hash(input));
     printf("%s\n", key);
 	size_t msg_length = strlen(key) + sizeof(net_message_t);
 

@@ -90,8 +90,8 @@ int create_message(char* msg)
     /* Data assignation */
     length = size;
     type   = 0x02;
-    input1 = 20;
-    input2 = 10;
+    input1 = 0x17;
+    input2 = 0x07;
 
     /* Index declaration */
     length_index = 0;
