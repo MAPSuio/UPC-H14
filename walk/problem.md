@@ -19,18 +19,22 @@ one of them gets marked by Chavatangakwunua.
 
 Neither wants to be marked, if they play the game optimally, who will win?
 
-## Input The first line of input contains two integers _n_ and _m_, the number
-of nodes in the graph and the number of roads in the park.  Then follows _m_
-lines, each line with three numbers _a_, _b_ and _p_, signifying that there is
-a path from node _a_ to node _b_ with length _p_.  The nodes are counted from 0
-to _n_-1.
+## Input
+The first line of input contains two integers _n_ and _m_, the number of nodes
+in the graph and the number of roads in the park. Then follows _m_ lines, each
+line with three numbers _a_, _b_ and _p_, signifying that there is a path from
+node _a_ to node _b_ with length _p_.  The nodes are counted from 0 to _n_-1.
 
-## Output One single line with the name of winner.
+## Output
+One single line with the name of winner.
 
 ## Constraints
+1<_n_<100000
+0<_m_<200000
+p<100000 is a prime number
 
-1<_n_<100000 0<_m_<200000 p<100000 is a prime number
+## Sample input
+2 1 0 1 2
 
-## Sample input 2 1 0 1 2
-
-## Sample output Angwusnasomtaqa
+## Sample output
+Angwusnasomtaqa
