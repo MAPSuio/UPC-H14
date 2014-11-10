@@ -43,7 +43,7 @@ public class joakimjl{
             startDate = startDate.minusDays(1);
         }
 
-        System.out.print(counter);
+        System.out.println(counter);
     }
 
 

@@ -75,6 +75,6 @@ int main(int argc, char* argv[])
         }
     }
 
-    printf("%d", counter);
+    printf("%d\n", counter);
     return 0;
 }
