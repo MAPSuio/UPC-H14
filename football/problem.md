@@ -1,5 +1,6 @@
 # I'd rather walk alone
- 
+ ![](../images/walkalone.jpg)
+
 One evening your visiting your uncle, you find yourself exploring his dark basement. In a hidden drawer along some football cards you discover some old and almost unreadable hand written notes. 
 The title says season 1989/1990.
 You examine the papers closely and discover numerous messages. "Liverpool before Manchester United" a message says. You are stunned.
