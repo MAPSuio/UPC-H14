@@ -1,5 +1,5 @@
 # Happy birthday to you
-Joakim Lindquister
+Problem author: Joakim Lindquister
 
 [Problem text](problem.md)
 
