@@ -6,8 +6,8 @@ n = int(stdin.next())
 prizes = [5790] + [float(line.split()[1]) for line in stdin]
 
 # sort prizes, slowly
-for i in xrange(n-1):
-    for j in xrange(i+1, n-1):
+for i in xrange(n):
+    for j in xrange(i+1, n):
         if prizes[i] < prizes[j]:
             tmp = prizes[i]
             prizes[i] = prizes[j]
