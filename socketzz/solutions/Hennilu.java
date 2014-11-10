@@ -3,6 +3,8 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 /**
  * Should do:
@@ -29,27 +31,27 @@ public class Hennilu {
 
         /* Whole lotta shit happens here */
         try {
-            length = 0x00; // Bogus data
+            length = 0x04; // Bogus data
             type   = 0x02; // Bogus data
 
             stdin = new Scanner(System.in);
 
             System.out.print("input1: ");
             input1 = getInput();
-            System.out.println();
             System.out.print("input2: ");
             input2 = getInput();
-            System.out.println();
 
             /* Create the host */
             InetAddress serverIP = InetAddress.getByName(HOST);
 
             /* Make the socket */
             socket = new DatagramSocket();
-
+            
             /* Test the socket -- REMOVE -- */
             byte[] data = {length, type, input1, input2};
             DatagramPacket packet = new DatagramPacket(data, data.length, serverIP, PORT);
+            System.out.println("PACKET INPUT1 SENT: " + (int) data[2]);
+            System.out.println("PACKET INPUT2 SENT: " + (int) data[3]);
 
             /* Ship it! */
             socket.send(packet);
@@ -111,6 +113,8 @@ public class Hennilu {
      * @throws IOException
      */
     public static byte getInput() throws IOException {
-        return stdin.nextLine().getBytes()[0];
+        int input = stdin.nextInt();
+        stdin.nextLine();
+        return (byte) input;
     }
 }

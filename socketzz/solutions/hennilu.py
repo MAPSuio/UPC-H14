@@ -4,17 +4,17 @@ from sys import argv, exit
 
 HOST = 'localhost'
 PORT = 3950
-PADDING = 4
 
 sock = socket(AF_INET, SOCK_DGRAM)
 
 # Build the message
 input1      = raw_input('input1: ')
 input2      = raw_input('input2: ')
+length      = 0x04
 packet_type = 0x02
 
 # Padded single byte because we don't need to use the length factor when sending
-msg = pack('BBBB', 0x04, packet_type, int(input1), int(input2))
+msg = pack('BBBB', length, packet_type, int(input1), int(input2))
 
 # Send the message
 sock.sendto(msg, (HOST, PORT)) # TEMP
