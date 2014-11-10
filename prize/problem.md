@@ -8,7 +8,8 @@ participate in the contest. The problem, however, is that they aren't good
 enough to win.
 
 The prizes are ranged after value. The best team gets the most expensive prize,
-the second best team get the second most expensize prize, and so on.
+the second best team get the second most expensize prize, and so on. The
+iPhone has a value of `5790`.
 
 Which position does the commitee team have to end on in order to win the
 iPhone?
@@ -16,14 +17,11 @@ iPhone?
 ## Input
 The first line of input contains a single integer _N_, the number of prizes.
 
-Then follows _N_ lines describing the prizes, in no particular order. Each line
-contains a word (atmost 50 characters long), the name of the prize, followed
-by a positive number _v_, the value of the prize. No two prizes will have the
-same name, and all values will have a relative difference of at least
-10<sup>-8</sup>.
-
-There will always be a prize named `iPhone`, and it will always have a value of
-`5790`.
+Then follows _N - 1_ lines describing the prizes (except the iPhone), in no
+particular order. Each line contains a word (atmost 50 characters long), the
+name of the prize, followed by a positive number _v_, the value of the prize.
+No two prizes will have the same name, and all values will have a relative
+difference of at least 10<sup>-8</sup>.
 
 ## Output
 Output a single integer; the position that the commitee has to end on in order
@@ -42,7 +40,6 @@ If it is impossible to get the phone without winning the entire contest
 iMac 9290
 Tesla 867000
 Litago 17.90
-iPhone 5790
 ```
 
 ## Sample output 1
@@ -54,7 +51,6 @@ iPhone 5790
 ```
 4
 Litago 18
-iPhone 5790
 Lue 100
 PS4 3590
 ```

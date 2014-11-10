@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 
     int num_larger = 0;
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n-1; ++i) {
         double value;
         char buf[50];
         scanf("%s %lf", buf, &value);
