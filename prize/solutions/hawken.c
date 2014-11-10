@@ -15,7 +15,7 @@ int main() {
 	j = 0;
 
 	// Read and find the iphone
-	for(i=0;i<n;i++) {
+	for(i=0;i<n-1;i++) {
 		scanf("%s", name);
 		scanf("%lf", &tmp);
 		if(!strcmp(name, "iPhone"))

@@ -1,5 +1,5 @@
 /*
-@EXPECTED_RESULTS@: WRONG_ANSWER
+@EXPECTED_RESULTS@: WRONG-ANSWER
 */
 
 #include <stdio.h>

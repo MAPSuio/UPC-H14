@@ -1,9 +1,9 @@
-# @EXPECTED_RESULTS@: TIMEOUT
+# @EXPECTED_RESULTS@: TIMELIMIT
 
 from sys import stdin
 
 n = int(stdin.next())
-prizes = [float(line.split()[1]) for line in stdin]
+prizes = [5790] + [float(line.split()[1]) for line in stdin]
 
 # sort prizes, slowly
 for i in xrange(n-1):
