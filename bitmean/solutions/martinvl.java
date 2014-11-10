@@ -1,5 +1,5 @@
 /*
-# @EXPECTED_RESULTS@: CORRECT
+@EXPECTED_RESULTS@: CORRECT
 */
 
 import java.util.Scanner;

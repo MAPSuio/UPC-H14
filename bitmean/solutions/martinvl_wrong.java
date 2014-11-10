@@ -1,5 +1,5 @@
 /*
-# @EXPECTED_RESULTS@: WRONG-ANSWER
+@EXPECTED_RESULTS@: WRONG-ANSWER
 */
 
 import java.util.Scanner;
