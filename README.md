@@ -95,6 +95,16 @@ __Algoritme/problemsjanger__: Areal av polygon
 __Forfatter__: martinvl  
 __Løst av__: martinvl
 
+### [Happy birthday to you](birthday)
+__Algoritme/problemsjanger__: Skuddår og dato-iterering  
+__Forfatter__: joakimjl  
+__Løst av__: joakimjl
+
+### [I'd rather walk alone](football)
+__Algoritme/problemsjanger__: Topografisk sortering  
+__Forfatter__: joakimjl  
+__Løst av__: joakimjl
+
 ### [The Fibonacci Rabbits](fibez)
 __Algoritme/problemsjanger__: Fibonacci  
 __Forfatter__: hennilu  
