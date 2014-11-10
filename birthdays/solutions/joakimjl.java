@@ -12,23 +12,13 @@ public class Main{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        /*
         int startDay = in.nextInt();
         int startMonth = in.nextInt();
         int startYear = in.nextInt();
-
+        in.next();
         int endDay = in.nextInt();
         int endMonth = in.nextInt();
         int endYear = in.nextInt();
-        */
-
-        int startDay = 1 ;
-        int startMonth = 3;
-        int startYear = 1992;
-
-        int endDay = 1;
-        int endMonth = 3;
-        int endYear = 2020;
 
         LocalDate startDate = LocalDate.of(startYear, startMonth, startDay);
         LocalDate endDate = LocalDate.of(endYear, endMonth, endDay);
@@ -46,7 +36,6 @@ public class Main{
         while( ! startDate.isAfter(endDate)){
             if(startDate.isLeapYear() && isWeekend(startDate)){
                 counter++;
-                System.out.println(startDate.toString());
             }
 
             /* Set the day to the last day in february */
@@ -54,7 +43,7 @@ public class Main{
             startDate = startDate.minusDays(1);
         }
 
-        System.out.println(counter);
+        System.out.print(counter);
     }
 
 
