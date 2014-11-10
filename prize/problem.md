@@ -18,8 +18,8 @@ The first line of input contains a single integer _N_, the number of prizes.
 
 Then follows _N_ lines describing the prizes, in no particular order. Each line
 contains a word (atmost 50 characters long), the name of the prize, followed
-by an positive number _v_, the value of the prize. No two prizes will have the
-same name, and there will always be a prize named `iPhone`.
+by a positive number _v_, the value of the prize. No two prizes will have the
+same name _or_ value, and there will always be a prize named `iPhone`.
 
 ## Output
 Output a single integer; the position that the commitee has to end on in order
@@ -29,8 +29,8 @@ If it is impossible to get the phone without winning the entire contest
 (remember, the commitee aren't that good), simply output `STEAL THE PHONE`.
 
 ## Constraints
-1 &le; _N_ &le; 10000  
-1 &le; _v_ &le; 10000000
+1 &le; _N_ &le; 10<sup>4</sup>  
+1 &le; _v_ &le; 10<sup>7</sup>
 
 ## Sample input 1
 ```
@@ -48,10 +48,10 @@ iPhone 5790
 
 ## Sample input 2
 ```
-4 6
+4
 Litago 18
 iPhone 5790
-Galaxy_S4 100
+Lue 100
 PS4 3590
 ```
 
