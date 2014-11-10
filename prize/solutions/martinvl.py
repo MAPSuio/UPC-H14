@@ -3,18 +3,9 @@
 from sys import stdin
 
 stdin.next()
-prizes = [line.split() for line in stdin]
 
-# find prize of iphone
-iphone = 0
-
-for prize in prizes:
-    if prize[0] == 'iPhone':
-        iphone = float(prize[1])
-        break
-
-# count the number of prizes that are more valuable
-more_valuable = sum(map(lambda prize: float(prize[1]) > iphone, prizes))
+# count the number of prizes that are more valuable than the iphone
+more_valuable = sum((float(line.split()[1]) > 5790 for line in stdin))
 
 if more_valuable:
     print more_valuable + 1

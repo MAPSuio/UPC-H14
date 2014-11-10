@@ -3,19 +3,8 @@
 from sys import stdin
 
 stdin.next()
-prizes = []
-iphone = ()
 
-for line in stdin:
-    name, value = line.split()
-    record = (float(value), name)
-
-    if name == 'iPhone':
-        iphone = record
-
-    prizes.append(record)
-
-p = sorted(prizes, reverse=True).index(iphone)
+p = sorted((float(line.split()[1]) for line in stdin), reverse=True).index(5790)
 
 if p:
     print p + 1

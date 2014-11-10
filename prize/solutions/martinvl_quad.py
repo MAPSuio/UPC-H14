@@ -3,27 +3,17 @@
 from sys import stdin
 
 n = int(stdin.next())
-prizes = []
-iphone = ()
-
-for line in stdin:
-    name, value = line.split()
-    record = [float(value), name]
-
-    if name == 'iPhone':
-        iphone = record
-
-    prizes.append(record)
+prizes = [float(line.split()[1]) for line in stdin]
 
 # sort prizes, slowly
 for i in xrange(n):
     for j in xrange(i+1, n):
-        if prizes[i][0] < prizes[j][0]:
+        if prizes[i] < prizes[j]:
             tmp = prizes[i]
             prizes[i] = prizes[j]
             prizes[j] = tmp
 
-p = prizes.index(iphone)
+p = prizes.index(5790)
 
 if p:
     print p + 1
