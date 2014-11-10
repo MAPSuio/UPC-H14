@@ -1,3 +1,5 @@
+# @EXPECTED_RESULTS@: CORRECT
+
 from sys import stdin
 
 stdin.next()
