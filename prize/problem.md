@@ -19,8 +19,11 @@ The first line of input contains a single integer _N_, the number of prizes.
 Then follows _N_ lines describing the prizes, in no particular order. Each line
 contains a word (atmost 50 characters long), the name of the prize, followed
 by a positive number _v_, the value of the prize. No two prizes will have the
-same name _or_ value, and there will always be a prize named `iPhone`. The
-`iPhone` will always have a value of `5790`.
+same name, and all values will have a relative difference of at least
+10<sup>-8</sup>.
+
+There will always be a prize named `iPhone`, and it will always have a value of
+`5790`.
 
 ## Output
 Output a single integer; the position that the commitee has to end on in order
