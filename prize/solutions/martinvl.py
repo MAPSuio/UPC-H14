@@ -3,21 +3,20 @@
 from sys import stdin
 
 stdin.next()
-prizes = []
-iphone = ()
+prizes = [line.split() for line in stdin]
 
-for line in stdin:
-    name, value = line.split()
-    record = (float(value), name)
+# find prize of iphone
+iphone = 0
 
-    if name == 'iPhone':
-        iphone = record
+for prize in prizes:
+    if prize[0] == 'iPhone':
+        iphone = float(prize[1])
+        break
 
-    prizes.append(record)
+# count the number of prizes that are more valuable
+more_valuable = sum(map(lambda prize: float(prize[1]) > iphone, prizes))
 
-p = sorted(prizes, reverse=True).index(iphone)
-
-if p:
-    print p + 1
+if more_valuable:
+    print more_valuable + 1
 else:
     print 'STEAL THE PHONE'
