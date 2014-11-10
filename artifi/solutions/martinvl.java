@@ -1,3 +1,7 @@
+/*
+@EXPECTED_RESULTS@: CORRECT
+*/
+
 import java.util.Scanner;
 
 public class martinvl {

@@ -1,0 +1,21 @@
+# @EXPECTED_RESULTS@: TIMEOUT
+
+from sys import stdin
+
+n = int(stdin.next())
+prizes = [float(line.split()[1]) for line in stdin]
+
+# sort prizes, slowly
+for i in xrange(n):
+    for j in xrange(i+1, n):
+        if prizes[i] < prizes[j]:
+            tmp = prizes[i]
+            prizes[i] = prizes[j]
+            prizes[j] = tmp
+
+p = prizes.index(5790)
+
+if p:
+    print p + 1
+else:
+    print 'STEAL THE PHONE'

@@ -66,7 +66,7 @@ def build_problem(probdir, report_errors=False):
         return 1
 
     if (call(['cp %s/samples/*.in tmp/' % probdir], shell=True, stderr=devnull) or\
-            call(['cp %s/samples/*.out tmp/' % probdir], shell=True, stderr=devnull)) and\
+            call(['cp %s/samples/*.out tmp/' % probdir], shell=True, stderr=devnull)) or\
             (call(['cp %s/testdata/*.in tmp/' % probdir], shell=True, stderr=devnull) or\
             call(['cp %s/testdata/*.out tmp/' % probdir], shell=True, stderr=devnull)):
         if report_errors:

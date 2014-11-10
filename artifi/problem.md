@@ -1,16 +1,12 @@
 # Artificial three-year-old
 ![](../images/artifi.png)
 
-Artificial intelligence is very popular nowadays, and companies like to host
-various contests where you are supposed to implement an artificial
-intelligence.
-
 You've been challenged to write a program that simulates a typical
 three-year-old in an epic yes/no-battle with a grown-up. Making an artificial
 intelligence for this is easy. If the grown-up says `yes` you reply `no`, and
 if the grown-up says `no` you reply `yes`.
 
-Write a program with artificial intelligence for simulating such a
+Write a program using this amazing technology for simulating such a
 three-year-old.
 
 ## Input

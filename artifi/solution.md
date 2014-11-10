@@ -1,2 +1,2 @@
-# <problem title here>
-<short explanation of how to solve problem here>
+# Artificial three-year-old
+Simply output `yes` if input is `no`, output `no` otherwise.

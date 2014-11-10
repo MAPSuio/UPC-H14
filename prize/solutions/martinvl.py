@@ -1,21 +1,13 @@
+# @EXPECTED_RESULTS@: CORRECT
+
 from sys import stdin
 
 stdin.next()
-prizes = []
-iphone = ()
 
-for line in stdin:
-    name, value = line.split()
-    record = (float(value), name)
+# count the number of prizes that are more valuable than the iphone
+more_valuable = sum((float(line.split()[1]) > 5790 for line in stdin))
 
-    if name == 'iPhone':
-        iphone = record
-
-    prizes.append(record)
-
-p = sorted(prizes, reverse=True).index(iphone)
-
-if p:
-    print p + 1
+if more_valuable:
+    print more_valuable + 1
 else:
     print 'STEAL THE PHONE'

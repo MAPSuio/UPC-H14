@@ -81,12 +81,14 @@ Hvis oppgaven er ment å skulle løses med en bestemt algoritme (med en gitt kom
 ### [A bit mean](bitmean)
 __Algoritme/problemsjanger__: Triksing med binære tall  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Artificial three-year-old](artifi)
 __Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Festival area](festival)
 __Algoritme/problemsjanger__: Areal av polygon  
