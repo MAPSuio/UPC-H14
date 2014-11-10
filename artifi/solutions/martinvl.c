@@ -1,3 +1,7 @@
+/*
+@EXPECTED_RESULTS@: CORRECT
+*/
+
 #include <stdio.h>
 #include <string.h>
 
@@ -7,4 +11,5 @@ int main(int argc, char* argv[])
     scanf("%s", word);
 
     printf("%s\n", strcmp(word, "yes") ? "yes" : "no");
+    return 0;
 }

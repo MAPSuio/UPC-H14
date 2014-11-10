@@ -1,5 +1,5 @@
 /*
-# @EXPECTED_RESULTS@: TIMEOUT
+@EXPECTED_RESULTS@: TIMEOUT, RUN-ERROR
 */
 
 import java.util.Scanner;
