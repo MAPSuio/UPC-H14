@@ -31,7 +31,7 @@ Output the mean of the to binary numbers. The answer must also be formatted in
 binary.
 
 ## Constraints
-1 &le; _n_ < _m_ &le; 10<sup>7</sup>
+1 &le; _n_ < _m_ &le; 10<sup>6</sup>
 
 ## Sample input
 ```
