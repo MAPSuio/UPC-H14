@@ -19,11 +19,11 @@ public class Hennilu {
     private static final int PORT        = 3950;
     private static final int PADDING     = 4;
     private static final int BYTE        = 8;
-    private static final String HOST     = "localhost";
+private static final String HOST     = "178.62.248.162";
+//private static final String HOST     = "norge";
     private static Scanner stdin;
 
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
         byte length;
         byte type;
         byte input1;
@@ -38,9 +38,7 @@ public class Hennilu {
 
             stdin = new Scanner(System.in);
 
-            System.out.print("input1: ");
             input1 = getInput();
-            System.out.print("input2: ");
             input2 = getInput();
 
             /* Create the host */
@@ -52,8 +50,6 @@ public class Hennilu {
             /* Test the socket -- REMOVE -- */
             byte[] data = {length, type, input1, input2};
             DatagramPacket packet = new DatagramPacket(data, data.length, serverIP, PORT);
-            System.out.println("PACKET INPUT1 SENT: " + (int) data[2]);
-            System.out.println("PACKET INPUT2 SENT: " + (int) data[3]);
 
             /* Ship it! */
             socket.send(packet);
@@ -68,8 +64,7 @@ public class Hennilu {
             socket.receive(packet);
 
             /* Decode and print the response */
-            System.out.println("Response form server using method1: " + method1(packet));
-            System.out.println("Response form server using method2: " + method2(packet));
+            System.out.print(method2(packet));
 
         } catch(IOException scn) {
             System.out.println("Scanner exception!");

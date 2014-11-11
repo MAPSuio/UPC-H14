@@ -3,14 +3,15 @@ from struct import *
 from socket import *
 from sys import argv, exit
 
-HOST = 'vor.ifi.uio.no'
+#HOST = '178.62.248.162'
+HOST = 'localhost'
 PORT = 3950
 
 sock = socket(AF_INET, SOCK_DGRAM)
 
 # Build the message
-input1      = raw_input('input1: ')
-input2      = raw_input('input2: ')
+input1      = raw_input()
+input2      = raw_input()
 length      = 0x04
 packet_type = 0x02
 

@@ -87,20 +87,20 @@ void net_handle_event(void) {
 		retval = hello(&src_addr, addrlen, buffer);
 			
 	} else if (kind == GET) {
+		if (msg->total_size != 4) {
+			_ERR("Protocoll error");
+		}
+
 		retval = reply_hash(&src_addr, addrlen, buffer);
 		if (retval < 0) {
-
-			printf("error in reply_hash\n");
-			//	reply_error(src_addr, addrlen);
+			_ERR("Failed to reply");
 		}
 	}
 
 	else if (kind == ANSWER) {
-
-		// used for testing 
+		_ERR("Got a answermessage");
 	} else {
 		_ERR("Got jibberish from client X");
-		// protocoll error send back error 
 	}
 }
 

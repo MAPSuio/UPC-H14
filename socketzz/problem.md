@@ -10,7 +10,7 @@ size. (2^8 bytes).
 
 In this task we have prepaired a server running on port 3950 at vor.ifi.uio.no.
 you can use this when you are testing, but when you deliver you must make
-sure that your client is connecting to 172.62.248.162 at port 3950.
+sure that your client is connecting to 178.62.248.162 at port 3950.
 
 ## Input
 Input is two integerns with newlines separating them.
