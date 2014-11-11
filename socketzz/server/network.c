@@ -207,6 +207,8 @@ size_t net_send(struct sockaddr_in* addr, socklen_t len, const char* buf, int le
 		return -1;
 	}
 
+	_DEBUG("Sent %d bytes\n", bytes_sent);
+
 	return bytes_sent;
 }
 
