@@ -8,13 +8,12 @@ In this task you must be able to send two inputs to our server via our defined
 protocol. The server will reply with a key that can vary up to the total message
 size. (2^8 bytes).
 
-In this task we have prepaired a server running on port 3950 at <this server>.
+In this task we have prepaired a server running on port 3950 at vor.ifi.uio.no.
 you can use this when you are testing, but when you deliver you must make
-sure that localhost or 127.0.0.1 is the hostname or address.
+sure that your client is connecting to 172.62.248.162 at port 3950.
 
 ## Input
-You can freely choose input in input1 and input2. But please hardcode it
-in your code so our jugingsystem will be able to test your solution.
+Input is two integerns with newlines separating them.
 
 ## Output
 Your program should output the key you got from the server.
