@@ -3,7 +3,7 @@
 */
 
 #include <stdio.h>
-#define MAX_N 10001
+#define MAX_N 100001
 
 int main(int argc, char* argv[])
 {

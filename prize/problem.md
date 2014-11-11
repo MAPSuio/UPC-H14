@@ -31,7 +31,7 @@ If it is impossible to get the phone without winning the entire contest
 (remember, the commitee aren't that good), simply output `STEAL THE PHONE`.
 
 ## Constraints
-1 &le; _N_ &le; 10<sup>4</sup>  
+1 &le; _N_ &le; 10<sup>5</sup>  
 1 &le; _v_ &le; 10<sup>7</sup>
 
 ## Sample input 1
