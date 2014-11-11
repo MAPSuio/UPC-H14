@@ -10,12 +10,12 @@ public class martinvl_exponential {
 
         int d = in.nextInt();
         int m = in.nextInt();
-        int n = in.nextInt();
+        long n = in.nextLong();
 
         System.out.printf("%08d\n", keanucci(d, m, n));
     }
 
-    static int keanucci(int d, int m, int n) {
+    static int keanucci(int d, int m, long n) {
         if (n == 0) {
             return d;
         }

@@ -1,5 +1,5 @@
 /*
-@EXPECTED_RESULTS@: WRONG_ANSWER
+@EXPECTED_RESULTS@: WRONG-ANSWER
 */
 
 #include <stdio.h>
@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 
     int num_larger = 0;
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n-1; ++i) {
         float value;
         char buf[50];
         scanf("%s %f", buf, &value);

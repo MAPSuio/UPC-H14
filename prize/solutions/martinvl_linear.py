@@ -4,7 +4,7 @@ from sys import stdin
 
 stdin.next()
 
-p = sorted((float(line.split()[1]) for line in stdin), reverse=True).index(5790)
+p = sorted([5790] + [float(line.split()[1]) for line in stdin], reverse=True).index(5790)
 
 if p:
     print p + 1

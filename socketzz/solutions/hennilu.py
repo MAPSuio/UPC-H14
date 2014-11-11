@@ -1,8 +1,9 @@
+# @EXPECTED_RESULTS@: CORRECT
 from struct import *
 from socket import *
 from sys import argv, exit
 
-HOST = 'localhost'
+HOST = 'vor.ifi.uio.no'
 PORT = 3950
 
 sock = socket(AF_INET, SOCK_DGRAM)
