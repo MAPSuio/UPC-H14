@@ -16,6 +16,8 @@ static int PORT = 3950;
 
 void net_init() 
 {
+	struct sockaddr_in addr;
+	int err;
 	udp_socket = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
 	if(udp_socket < 0) {
@@ -23,23 +25,43 @@ void net_init()
         perror("socket()");
 		exit(-1);
 	}
+	
+	memset(&addr, 0, sizeof(struct sockaddr_in));
+	addr.sin_family			= AF_INET;
+	addr.sin_addr.s_addr 	= INADDR_ANY;
+	addr.sin_port			= htons(PORT);
+
+	err = bind(udp_socket, (struct sockaddr*)&addr, sizeof(struct sockaddr_in));
+	if (err < 0) {
+		_ERR("Failed to bind to port %d", PORT);
+		exit(-1);
+	}
+
 }
 
 void net_send()
 {
-    struct sockaddr_in addr;
     int retval;
     char msg[256];
     int msg_size;
 
-	memset(&addr, 0, sizeof(struct sockaddr_in));
-	addr.sin_family      = AF_INET;
-	addr.sin_addr.s_addr = INADDR_ANY;
-	addr.sin_port        = htons(PORT);
+	struct hostent* host_entry_ptr;
+	struct sockaddr_in dest_addr;
+
+	dest_addr.sin_family = AF_INET;
+	host_entry_ptr = gethostbyname("vor.ifi.uio.no");
+	//host_entry_ptr = gethostbyname("178.62.248.162");
+
+	memcpy((char*) &(dest_addr.sin_addr.s_addr), host_entry_ptr->h_addr_list[0],
+		host_entry_ptr->h_length);
+
+	dest_addr.sin_port = htons(3950);
+
 
     msg_size = create_message(msg);
 
-    retval = sendto(udp_socket, msg, msg_size, 0, (struct sockaddr *) &addr, sizeof(addr));
+    retval = sendto(udp_socket, msg, msg_size, 0, (struct sockaddr*)&dest_addr,
+			sizeof(dest_addr));
 
     if (retval == -1) {
         _ERR("Sendto failed: ");
