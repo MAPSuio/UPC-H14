@@ -134,7 +134,8 @@ __Løst av__: martinvl
 ### [The prize commitee](prize)
 __Algoritme/problemsjanger__: Sortering, finne element  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Quidditch breakup](quid)
 __Algoritme/problemsjanger__: Min cut  
