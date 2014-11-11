@@ -100,6 +100,12 @@ __Algoritme/problemsjanger__: Skuddår og dato-iterering
 __Forfatter__: joakimjl  
 __Løst av__: joakimjl
 
+### [A healthy supply of ministers](healthy)
+__Algoritme/problemsjanger__: Heap  
+__Forfatter__: martinvl  
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
+
 ### [I'd rather walk alone](football)
 __Algoritme/problemsjanger__: Topografisk sortering  
 __Forfatter__: joakimjl  
