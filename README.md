@@ -119,7 +119,8 @@ __Løst av__: hennilu
 ### [Kristiansand road work](kristian)
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  

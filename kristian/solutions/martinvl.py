@@ -2,13 +2,33 @@
 
 from sys import stdin
 
-X, Y, M = map(int, stdin.next().split())
+N, M = map(int, stdin.next().split())
+raw_grid = ''.join(stdin).replace('\n', '')
 
-opened = [[True]*Y for i in xrange(X)]
+# find start and goal
+start_idx = raw_grid.index('S')
+start = (start_idx / N, start_idx % N)
+
+goal_idx = raw_grid.index('G')
+goal = (goal_idx / N, goal_idx % N)
+
+# find open intersections
+opened = [[c != 'X' for c in raw_grid[i:i+N]] for i in xrange(0, M*N, N)]
+
+def get_neighbors(p):
+    global M, N
+
+    for dp in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+        np = (p[0] + dp[0], p[1] + dp[1])
+
+        if np[0] < 0 or np[0] >= M or np[1] < 0 or np[1] >= N:
+            continue
+
+        yield np
 
 def bfs(start, goal):
-    global opened, X, Y
-    dist = [[-1]*Y for i in xrange(X)]
+    global opened, M, N
+    dist = [[-1]*N for i in xrange(M)]
 
     dist[start[0]][start[1]] = 0
     q = [start]
@@ -20,12 +40,7 @@ def bfs(start, goal):
             if p == goal:
                 return dist[goal[0]][goal[1]]
 
-            for dp in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-                np = (p[0] + dp[0], p[1] + dp[1])
-
-                if np[0] < 0 or np[0] >= X or np[1] < 0 or np[1] >= Y:
-                    continue
-
+            for np in get_neighbors(p):
                 if dist[np[0]][np[1]] == -1 and opened[np[0]][np[1]]:
                     dist[np[0]][np[1]] = dist[p[0]][p[1]] + 1
                     nq.append(np)
@@ -34,15 +49,9 @@ def bfs(start, goal):
 
     return -1
 
-for data in (line.split() for line in stdin):
-    if data[0] == 'OPENED' or data[0] == 'CLOSED':
-        x, y = map(int, data[1:])
-        opened[x][y] = data[0] == 'OPENED'
-    else:
-        x1, y1, x2, y2 = map(int, data[1:])
-        dist = bfs((x1, y1), (x2, y2))
+dist = bfs(start, goal)
 
-        if dist == -1:
-            print 'STAY WHERE YOU ARE'
-        else:
-            print dist
+if dist == -1:
+    print 'STAY WHERE YOU ARE'
+else:
+    print dist-1
