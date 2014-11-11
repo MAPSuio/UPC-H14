@@ -1,5 +1,4 @@
 # Socketzz
-![](../images/network.jpg =750x100)
 
 Applications in 2014 often requeres to communicate with either servers, or 
 other clients. An importent aspect of this communication is a well defined
@@ -25,7 +24,7 @@ Your program should output the key you got from the server.
 Our server is using the protocol described here. It is important that you use 
 the same length of all fields, and send then via network order endian if 
 neasesary. 
-![](../images/protocol.png =750x100)
+![](/images/protocol.png =750x100)
 
 ## Sample input
 ```
