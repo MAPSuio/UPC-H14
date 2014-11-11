@@ -32,11 +32,14 @@ he becomes sick is obviously not possible. This means that if a patient becomes
 sick on day 3 with 2 days to live, he must be treated on day 3 or 4 in order to
 live.
 
-We will assume that all of Erna's health ministers will execute their job
-perfectly; they all manage the patient queue in an optimal way. It takes a day
-for a minister to resign and for a new one to take over, so even if two or more
-patients die on the same day, only one new minister is needed. Erna's term ends
-when all patients are either treated or dead.
+For the sake of simplicity and not overestimating the capacity of the norwegian
+health service, we will assume that all the hospitals combined can treat
+exactly one patient per day. We will also assume that all of Erna's health
+ministers will execute their job perfectly; they all manage the patient queue
+in an optimal way. It takes a day for a minister to resign and for a new one to
+take over, so even if two or more patients die on the same day, only one new
+minister is needed. Erna's term ends when all patients are either treated or
+dead.
 
 ## Input
 The first line of input contains two integers _n_ and _d_, the number of
