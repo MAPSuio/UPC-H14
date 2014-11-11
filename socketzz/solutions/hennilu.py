@@ -1,3 +1,4 @@
+# @EXPECTED_RESULTS@: CORRECT
 from struct import *
 from socket import *
 from sys import argv, exit

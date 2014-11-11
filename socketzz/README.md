@@ -1,5 +1,5 @@
 # Socketzz
-Problem author: Sjur Tveito Fredriksen og Henning Lund-Hanssen
+Problem author: Sjur Fredriksen og Henning Lund-Hanssen
 
 [Problem text](problem.md)
 

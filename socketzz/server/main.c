@@ -6,18 +6,10 @@
 #include "irq.h"
 
 int main(int argc, char* argv[]) {
-	int local_port;
-
-  	/* listen port */
-	local_port = 3950;
-
+  	int	local_port = 3950;
 	net_init(local_port);
-
-    /*
-     * An endless loop for processing everything that happens on this server
-     */
-
-    handle_events();
+	
+	handle_events();
 
     return 1;
 }
