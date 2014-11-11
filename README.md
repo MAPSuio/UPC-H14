@@ -141,6 +141,12 @@ __Algoritme/problemsjanger__: Min cut
 __Forfatter__: martinvl  
 __Løst av__: martinvl
 
+### [Roundabout madness](rabout)
+__Algoritme/problemsjanger__: Problemløsning  
+__Forfatter__: olalia  
+__Løst av__: olalia  
+__Status__: Ferdig, men ikke godkjent
+
 ### [Walking the dog](walk)
 __Algoritme/problemsjanger__: Problemløsning/analyse  
 __Forfatter__: olalia  
