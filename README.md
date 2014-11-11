@@ -82,7 +82,7 @@ Hvis oppgaven er ment å skulle løses med en bestemt algoritme (med en gitt kom
 __Algoritme/problemsjanger__: Triksing med binære tall  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent
 
 ### [Artificial three-year-old](artifi)
 __Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
