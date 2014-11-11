@@ -156,6 +156,12 @@ __Algoritme/problemsjanger__: Problemløsning/analyse
 __Forfatter__: olalia  
 __Løst av__:
 
+### [Something, something network](ssnw)
+__Algoritme/problemsjanger__: Benytte seg av datakommunikasjon
+__Forfatter__: sjurtf/hennilu
+__Løst av__: sjurtf/hennilu
+__Status__: Ferdig, men ikke godkjent
+
 ### [War](war)
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
