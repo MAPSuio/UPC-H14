@@ -138,7 +138,7 @@ __Status__: Ferdig, men ikke godkjent
 __Algoritme/problemsjanger__: Sortering, finne element  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Håkon
 
 ### [Quidditch breakup](quid)
 __Algoritme/problemsjanger__: Min cut  
@@ -166,3 +166,4 @@ __Status__: Ferdig, men ikke godkjent
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
 __Løst av__: hawken
+__Status__: Ferdig, men ikke godkjent
