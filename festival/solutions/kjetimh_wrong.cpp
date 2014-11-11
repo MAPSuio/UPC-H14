@@ -1,3 +1,7 @@
+/*
+@EXPECTED_RESULTS@: WRONG-ANSWER
+*/
+
 #include<iostream>
 #include<cmath>
 
