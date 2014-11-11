@@ -130,7 +130,8 @@ __Status__: Ferdig, men ikke godkjent
 ### [The pinmaker 2](pinmaker2)
 __Algoritme/problemsjanger__: Evaluering av differenslikning (i O(log n)))  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [The prize commitee](prize)
 __Algoritme/problemsjanger__: Sortering, finne element  
