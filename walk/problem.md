@@ -13,7 +13,7 @@ take a shower and put on new clothes.
 
 Angwusnasomtaqa and Bob have a very peculiar way of alternating who is holding
 the leash.  While they are walking, the person holding the leash can walk a
-distance of her or his choice of integral length (in metres), but never pass
+distance of her or his choice of integral length larger than zero (in metres), but never pass
 the next tree before handing the leash to the other.  Angwusnasomtaqa holds the
 leash first.
 
@@ -33,7 +33,10 @@ One single line with the name of winner.
 ## Constraints
 
 0<_n_<100000
-All the input distances are one digit integers different from 0.
+
+All the input distances are one digit integers larger than 0.
+
+
 
 
 ## Sample input 1
