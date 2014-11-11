@@ -28,7 +28,7 @@ order to do this you have to keep track of which intersections are closed by
 listening to the messages coming in from city authorities.
 
 ## Input
-The first line of input consists of two integers _X_, _Y_ and _M_, the height
+The first line of input consists of three integers _X_, _Y_ and _M_, the height
 and width of the city grid, and the number of messages you will receive.
 
 Then follows _M_ messages. Each message begins with a codeword (either `OPENED`,
