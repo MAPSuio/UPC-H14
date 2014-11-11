@@ -20,10 +20,10 @@ public class Hennilu {
     private static final int PADDING     = 4;
     private static final int BYTE        = 8;
     private static final String HOST     = "localhost";
+    //private static final String HOST     = "178.62.248.162";
     private static Scanner stdin;
 
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
         byte length;
         byte type;
         byte input1;
@@ -38,9 +38,7 @@ public class Hennilu {
 
             stdin = new Scanner(System.in);
 
-            System.out.print("input1: ");
             input1 = getInput();
-            System.out.print("input2: ");
             input2 = getInput();
 
             /* Create the host */
@@ -52,8 +50,6 @@ public class Hennilu {
             /* Test the socket -- REMOVE -- */
             byte[] data = {length, type, input1, input2};
             DatagramPacket packet = new DatagramPacket(data, data.length, serverIP, PORT);
-            System.out.println("PACKET INPUT1 SENT: " + (int) data[2]);
-            System.out.println("PACKET INPUT2 SENT: " + (int) data[3]);
 
             /* Ship it! */
             socket.send(packet);
@@ -66,10 +62,11 @@ public class Hennilu {
 
             /* Await response */
             socket.receive(packet);
+            String packetStringLength = new String(packet.getData());
+            byte packetLength = (byte) packetStringLength.substring(0,1).charAt(0);
 
             /* Decode and print the response */
-            System.out.println("Response form server using method1: " + method1(packet));
-            System.out.println("Response form server using method2: " + method2(packet));
+            System.out.println(method2(packet, (int) packetLength));
 
         } catch(IOException scn) {
             System.out.println("Scanner exception!");
@@ -88,7 +85,7 @@ public class Hennilu {
      * Takes in a packet and uses substrings to return a string
      * @return A new string containing only the hash
      */
-    public static String method1(DatagramPacket packet) {
+    public static String method1(DatagramPacket packet, int packetLength) {
         String encodedData = new String(packet.getData());
         return encodedData.substring(PADDING);
     }
@@ -97,12 +94,13 @@ public class Hennilu {
      * Takes in a packet and uses iterative adding to return a string
      * @return A new string containing only the hash
      */
-    public static String method2(DatagramPacket packet) {
-        byte[] tester = packet.getData();
-        byte[] byteResult = new byte[PACKET_SIZE - PADDING];
-        int byteCounter = 0;
+    public static String method2(DatagramPacket packet, int packetLength) {
+        int hashLength    = packetLength - PADDING;
+        int byteCounter   = 0;
+        byte[] tester     = packet.getData();
+        byte[] byteResult = new byte[hashLength];
 
-        for (int i = PADDING; i < tester.length; i++) {
+        for (int i = PADDING; i < packetLength; i++) {
             byteResult[byteCounter++] += tester[i];
         }
         return new String(byteResult);
@@ -116,7 +114,6 @@ public class Hennilu {
      */
     public static byte getInput() throws IOException {
         int input = stdin.nextInt();
-        stdin.nextLine();
         return (byte) input;
     }
 }

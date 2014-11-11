@@ -28,8 +28,7 @@ neasesary.
 
 ## Sample input
 ```
-12
-4
+12 4
 ```
 
 ## Sample output

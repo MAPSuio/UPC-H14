@@ -139,7 +139,6 @@ int reply_hash(struct sockaddr_in* addr, socklen_t addrlen, const char* buf) {
 	net_message_t* msg = (net_message_t*) buf;
 	char a = msg->input1 + 65;
 	char b = msg->input2 + 65;
-    printf("A: %c\tB: %c\n", a, b);
 
 	char* s = "alittlestring";
 	char* input = malloc(strlen(s) + 2);
