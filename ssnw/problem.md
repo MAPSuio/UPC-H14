@@ -13,7 +13,7 @@ you can use this when you are testing, but when you deliver you must make
 sure that your client is connecting to 178.62.248.162 at port 3950.
 
 ## Input
-Input is two integerns with newlines separating them.
+Input is two integers with newlines separating them.
 
 ## Output
 Your program should output the key you got from the server.
