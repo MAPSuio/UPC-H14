@@ -28,12 +28,12 @@ def mat_vec_prod(mat, vec):
 def mat_exp(mat, n):
     res = [[1, 0], [0, 1]]
 
-    while len(n):
-        if n[-1] == '1':
+    while n:
+        if n % 2:
             res = mat_prod(res, mat)
 
         mat = mat_prod(mat, mat)
-        n = n[:-1]
+        n /= 2
 
     return res
 
@@ -47,7 +47,7 @@ def keanucci(d, m, n):
     mat = [[1, 1], [1, 0]]
     vec = [m, d]
 
-    return mat_vec_prod(mat_exp(mat, bin(n-1)[2:]), vec)[0]
+    return mat_vec_prod(mat_exp(mat, n-1), vec)[0]
 
 d, m, n = map(int, stdin.read().split())
 print '%08d' % (keanucci(d, m, n) % p)

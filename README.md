@@ -100,6 +100,12 @@ __Algoritme/problemsjanger__: Skuddår og dato-iterering
 __Forfatter__: joakimjl  
 __Løst av__: joakimjl
 
+### [A healthy supply of ministers](healthy)
+__Algoritme/problemsjanger__: Heap  
+__Forfatter__: martinvl  
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
+
 ### [I'd rather walk alone](football)
 __Algoritme/problemsjanger__: Topografisk sortering  
 __Forfatter__: joakimjl  
@@ -113,27 +119,37 @@ __Løst av__: hennilu
 ### [Kristiansand road work](kristian)
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [The pinmaker 2](pinmaker2)
 __Algoritme/problemsjanger__: Evaluering av differenslikning (i O(log n)))  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [The prize commitee](prize)
 __Algoritme/problemsjanger__: Sortering, finne element  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Quidditch breakup](quid)
 __Algoritme/problemsjanger__: Min cut  
 __Forfatter__: martinvl  
 __Løst av__: martinvl
+
+### [Roundabout madness](rabout)
+__Algoritme/problemsjanger__: Problemløsning  
+__Forfatter__: olalia  
+__Løst av__: olalia  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Walking the dog](walk)
 __Algoritme/problemsjanger__: Problemløsning/analyse  

@@ -2,7 +2,6 @@
 @EXPECTED_RESULTS@: CORRECT
 */
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class martinvl {
@@ -11,19 +10,19 @@ public class martinvl {
 
         int d = in.nextInt();
         int m = in.nextInt();
-        String n = in.next();
+        long n = in.nextLong();
 
         System.out.printf("%08d\n", keanucci(d, m, n));
     }
 
     static final int p = (int)1e8;
 
-    static int keanucci(int d, int m, String n) {
-        if (n.equals("0")) {
+    static int keanucci(int d, int m, long n) {
+        if (n == 0) {
             return d;
         }
 
-        if (n.equals("1")) {
+        if (n == 1) {
             return m;
         }
 
@@ -31,20 +30,20 @@ public class martinvl {
         long[][] mat = new long[][]{new long[]{1, 1}, new long[]{1, 0}};
         long[] vec = new long[]{m, d};
 
-        return (int)matVecProd(matExp(mat, new BigInteger(n).subtract(BigInteger.ONE)), vec)[0];
+        return (int)matVecProd(matExp(mat, n-1), vec)[0];
     }
 
     // calculate mat^n for 2x2 matrix, n >= 1
-    static long[][] matExp(long[][] mat, BigInteger n) {
+    static long[][] matExp(long[][] mat, long n) {
         long[][] res = new long[][]{new long[]{1, 0}, new long[]{0, 1}};
 
-        while (n.compareTo(BigInteger.ZERO) > 0) {
-            if (n.testBit(0)) {
+        while (n > 0) {
+            if (n % 2 == 1) {
                 res = matProd(res, mat);
             }
 
             mat = matProd(mat, mat);
-            n = n.shiftRight(1);
+            n /= 2;
         }
 
         return res;

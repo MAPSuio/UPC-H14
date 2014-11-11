@@ -1,3 +1,4 @@
+// @EXPECTED_RESULTS@: CORRECT
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -90,8 +91,8 @@ int create_message(char* msg)
     /* Data assignation */
     length = size;
     type   = 0x02;
-    input1 = 0x17;
-    input2 = 0x07;
+    input1 = 0x02;
+    input2 = 0x02;
 
     /* Index declaration */
     length_index = 0;

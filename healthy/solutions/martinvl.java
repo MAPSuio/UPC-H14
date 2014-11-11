@@ -1,3 +1,7 @@
+/*
+@EXPECTED_RESULTS@: CORRECT
+*/
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
@@ -15,7 +19,7 @@ public class martinvl {
             q.add(in.nextInt());
         }
 
-        PriorityQueue<int[]> q2 = new PriorityQueue<int[]>(d, new Comparator<int[]>() {
+        PriorityQueue<int[]> q2 = new PriorityQueue<int[]>(d+1, new Comparator<int[]>() {
             public int compare(int[] lhs, int[] rhs) {
                 return lhs[0] - rhs[0];
             }
@@ -37,7 +41,18 @@ public class martinvl {
                 q.add(p[0] + p[1]);
             }
 
-            if (q.poll() < day) {
+            boolean resigned = false;
+
+            if (q.poll()-1 < day) {
+                resigned = true;
+            }
+
+            while (!q.isEmpty() && q.peek()-1 <= day) {
+                resigned = true;
+                q.poll();
+            }
+
+            if (resigned) {
                 ++numMinisters;
             }
         }
