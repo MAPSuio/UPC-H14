@@ -1,5 +1,5 @@
 /*
-@EXPECTED_RESULTS@: CORRECT
+@EXPECTED_RESULTS@: WRONG-ANSWER
  * Idea: Calculate the polygon by triangles, until only two points remain, then return the absolute value
  *
  * points: a b c d e f g
@@ -11,6 +11,8 @@
  *
  * Additionally, do the edge sum to find out which direction the graph is going.
  * This means it will ignore triangles going outside
+ *
+ * The error is the strict separation of negative and positive values. They need to be added to give correct results.
  */
 
 #include <stdio.h>
@@ -39,13 +41,12 @@ inline double edgesum(point a, point b) {
 
 int main() {
 	int n;
-	double area = 0, direction = 0;
+	double tmp = 0, pos = 0, neg = 0;
+	double direction = 0;
 	point a, b, c;
-
 	scanf("%d", &n);
 	scanf("%lf %lf", &a.x, &a.y);
 	scanf("%lf %lf", &b.x, &b.y);
-
 	direction += edgesum(a,b);
 	n -= 2;
 	while(n > 0) {
@@ -53,7 +54,9 @@ int main() {
 		scanf("%lf %lf", &c.x, &c.y);
 
 		// calculate into tmp
-		area += trianglesum(a,b,c);
+		tmp = trianglesum(a,b,c);
+		if(tmp < 0) neg -= tmp;
+		else pos += tmp;
 
 		// calculate the edge
 		direction += edgesum(b,c);
@@ -63,9 +66,8 @@ int main() {
 		b.y = c.y;
 		n--;
 	}
-	direction += edgesum(b, a);
-
-	if(direction > 0) area = -area;
-	printf("%lf\n", area);
+	if(direction > 0) pos = neg;
+	fprintf(stderr, "Direction: %lf\n", direction);
+	printf("%lf\n", pos);
 	return 0;
 }
