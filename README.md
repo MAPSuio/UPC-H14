@@ -165,5 +165,5 @@ __Status__: Ferdig, godkjent av Martin
 ### [War](war)
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
-__Løst av__: hawken  
+__Løst av__: hawken, martinvl  
 __Status__: Ferdig, men ikke godkjent
