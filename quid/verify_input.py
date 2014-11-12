@@ -8,10 +8,7 @@ assert(0 <= t <= n)
 assert(0 <= o + t <= n)
 
 oslo = {}
-os = []
-
-if o > 0:
-    os = map(int, stdin.next().split())
+os = map(int, stdin.next().split())
 
 assert(len(os) == o)
 
@@ -22,10 +19,7 @@ for i in os:
     oslo[i] = True
 
 trondheim = {}
-tr = []
-
-if t > 0:
-    tr = map(int, stdin.next().split())
+tr = map(int, stdin.next().split())
 
 assert(len(tr) == t)
 
