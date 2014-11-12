@@ -151,7 +151,7 @@ __Status__: Ferdig, men ikke godkjent
 __Algoritme/problemsjanger__: Problemløsning  
 __Forfatter__: olalia  
 __Løst av__: olalia, martinvl  
-__Status__: Ferdig, og godkjent av Håkon
+__Status__: Ferdig, og godkjent av Håkon og Martin
 
 ### [Walking the dog](walk)
 __Algoritme/problemsjanger__: Problemløsning/analyse  
