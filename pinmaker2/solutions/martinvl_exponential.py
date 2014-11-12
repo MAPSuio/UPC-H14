@@ -1,4 +1,4 @@
-# @EXPECTED_RESULTS@: TIMEOUT
+# @EXPECTED_RESULTS@: TIMELIMIT
 
 from sys import stdin
 
