@@ -96,7 +96,7 @@ __Forfatter__: martinvl
 __Løst av__: martinvl  
 __Status__: Godkjent av Ola og Håkon
 
-### [Happy birthday to you](birthday)
+### [Happy birthday to you](birthdays)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
 __Forfatter__: joakimjl  
 __Løst av__: joakimjl
