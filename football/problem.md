@@ -15,8 +15,7 @@ You can assume that all constraints given are valid, so that a team can't be pla
 A sorted list where the team who places first in the league are printed first. If there exist multiple ways to sort two otherwise equal teams, they should be sorted alphabetically.
 
 ## Sample input
-Liverpool BEFORE ManchesterUnited
-Wigan AFTER ManchesterUnited
+Liverpool BEFORE ManchesterUnitedWigan AFTER ManchesterUnited
 Chelsea AFTER Liverpool
 Wigan AFTER Chelsea
 

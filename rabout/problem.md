@@ -1,5 +1,5 @@
 # Roundabout madness
-![](<path to image here>)
+![](../images/rabout.png)
 
 Nobody knows why there seems to be so much more matter in the universe than
 anti-matter.  That does not matter for this problem, but you are a little

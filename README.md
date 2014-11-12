@@ -82,7 +82,7 @@ Hvis oppgaven er ment å skulle løses med en bestemt algoritme (med en gitt kom
 __Algoritme/problemsjanger__: Triksing med binære tall  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent
 
 ### [Artificial three-year-old](artifi)
 __Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
@@ -120,7 +120,7 @@ __Løst av__: hennilu
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent av Håkon
 
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
@@ -138,7 +138,7 @@ __Status__: Ferdig, men ikke godkjent
 __Algoritme/problemsjanger__: Sortering, finne element  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Håkon
 
 ### [Quidditch breakup](quid)
 __Algoritme/problemsjanger__: Min cut  
@@ -156,7 +156,14 @@ __Algoritme/problemsjanger__: Problemløsning/analyse
 __Forfatter__: olalia  
 __Løst av__:
 
+### [Something, something network](ssnw)
+__Algoritme/problemsjanger__: Datakommunikasjon  
+__Forfatter__: sjurtf/hennilu  
+__Løst av__: sjurtf/hennilu  
+__Status__: Ferdig, men ikke godkjent 
+
 ### [War](war)
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
-__Løst av__: hawken
+__Løst av__: hawken  
+__Status__: Ferdig, men ikke godkjent

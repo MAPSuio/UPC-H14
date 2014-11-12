@@ -1,8 +1,10 @@
+# @EXPECTED_RESULTS@: CORRECT
+
 from sys import stdin
 from math import atan2
 
 n = int(stdin.next())
-coords = [map(int, line.split()) for line in stdin]
+coords = [map(float, line.split()) for line in stdin]
 
 A = 0
 
