@@ -16,11 +16,11 @@ all fields, and send via network order endian if necessary.
 
 ![](../images/protocol.png)
 
-    - Total message size: Number of bytes in message
-    - Message type is defined as:
-        - 0x02 - Request a key from server
-        - 0x03 - Answer from server with key
-    - Input field 1/2: numbers read from stdin
+- Total message size: Number of bytes in message
+- Message type is defined as:
+    - 0x02 - Request a key from server
+    - 0x03 - Answer from server with key
+- Input field 1/2: numbers read from stdin
 
 ## Input
 Input consists of two space separated integers.

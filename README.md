@@ -158,7 +158,7 @@ __Status__: Godkjent av Håkon
 __Algoritme/problemsjanger__: Datakommunikasjon  
 __Forfatter__: sjurtf/hennilu  
 __Løst av__: sjurtf/hennilu  
-__Status__: Ferdig, men ikke godkjent 
+__Status__: Ferdig, godkjent av Martin
 
 ### [War](war)
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
