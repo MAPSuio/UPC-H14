@@ -93,7 +93,8 @@ __Status__: Ferdig, men ikke godkjent
 ### [Festival area](festival)
 __Algoritme/problemsjanger__: Areal av polygon  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Godkjent av Ola
 
 ### [Happy birthday to you](birthday)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
