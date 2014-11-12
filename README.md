@@ -122,13 +122,13 @@ __Status__: Ferdig, og godkjent av Håkon
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Ola
 
 ### [The pinmaker 2](pinmaker2)
 __Algoritme/problemsjanger__: Evaluering av differenslikning (i O(log n)))  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Ola
 
 ### [The prize commitee](prize)
 __Algoritme/problemsjanger__: Sortering, finne element  
