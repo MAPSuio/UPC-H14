@@ -22,18 +22,18 @@ If the game goes on for 100 000 rounds or more, they get tired and call it a dra
 You are given your and Mike's stack as input, and your program will print the name of the winner.
 
 ## Input
-* n - number of cards in your stack
-* m - number of cards in Mike's stack
-* n cards, each with value k, k0 being the top of the stack
-* m cards, each with value k, k0 being the top of the stack
+* _n_ - number of cards in your stack
+* _m_ - number of cards in Mike's stack
+* _n_ cards, each with value _k_, _k0_ being the top of the stack
+* _m_ cards, each with value _k_, _k0_ being the top of the stack
 
 ## Output
 * output one of you, mike or draw.
 
 ## Constraints
-* 0 &le; n, m &le; 500
+* 0 &le; _n_, _m_ &le; 500
 * multiple cards may carry the same value k
-* 0 &le; k &le; 10<sup>5</sup>
+* 0 &le; _k_ &le; 10<sup>5</sup>
 * If there are 100 000 rounds or more, they call it a draw.
 
 ## Sample input
