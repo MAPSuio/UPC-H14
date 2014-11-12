@@ -1,4 +1,4 @@
-# <Roundabout madness>
+# Roundabout madness
 
 This problem can be solved in linear time.  
 The first thing to do is to check whether the right drivers or left drivers are

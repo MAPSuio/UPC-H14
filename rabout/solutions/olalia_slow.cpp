@@ -17,7 +17,7 @@ int main(){
   }
   int x=1;
   if (R==L){
-    cout<<"Too Bad\n";
+    cout<<"Too bad\n";
     return 0;
   }
   int k;

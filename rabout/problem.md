@@ -20,7 +20,7 @@ left or right. The roundabout is cyclic.
 
 ## Output
 One line of space separated integers denoting the positions (counting from 0)
-in the string of the surviving drivers.  The answer should be in ascending
+of the surviving drivers in their initial positions.  The answer should be in ascending
 order. If no drivers survive, output a line with the string `Too bad` instead.
 
 ## Constraints
