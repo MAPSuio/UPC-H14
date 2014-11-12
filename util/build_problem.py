@@ -114,6 +114,7 @@ def build_problem(probdir, report_errors=False):
         'tmp/*.py',
         'tmp/*.py3',
         'tmp/*.java',
+        'tmp/*.java8',
         'tmp/*.c',
         'tmp/*.cpp',
         'tmp/*.in',
