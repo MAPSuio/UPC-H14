@@ -29,7 +29,7 @@ error less than 10<sup>-8</sup> will be accepted, so make sure to print enough
 decimals!
 
 ## Constraints
-3 &le; _N_ &le; 10<sup>5</sup>
+3 &le; _N_ &le; 10<sup>4</sup>
 |_x_|, |_y_| &le; 10<sup>6</sup>
 
 You can assume that the area is less than 10<sup>18</sup>
