@@ -25,8 +25,8 @@ _i + 1_ and _i - 1_. The last fence post is also connected to the first post.
 
 ## Output
 Print the area of the festival area. Solutions with an absolute or relative
-error less than 10<sup>-8</sup> will be accepted, so make sure to print enough
-decimals!
+error less than 10<sup>-5</sup> will be accepted. I.e. remember to use `double`
+in C, C++ and Java.
 
 ## Constraints
 3 &le; _N_ &le; 10<sup>4</sup>
