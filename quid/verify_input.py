@@ -2,7 +2,7 @@ from sys import stdin
 
 n, o, t, f = map(int, stdin.next().split())
 
-assert(1 <= n <= 500)
+assert(2 <= n <= 500)
 assert(0 <= o <= n)
 assert(0 <= t <= n)
 assert(0 <= o + t <= n)

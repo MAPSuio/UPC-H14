@@ -62,7 +62,7 @@ All IDs are between _1_ and _n_, inclusive.
 Output the minimum number of friendships that must be terminated.
 
 ## Constraints
-0 &le; _n_ &le; 500  
+2 &le; _n_ &le; 500  
 0 &le; _o_, _t_, &le; _o_ + _t_ &le; _n_
 
 ## Sample input 1
