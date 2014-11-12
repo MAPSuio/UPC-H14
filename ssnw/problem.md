@@ -15,7 +15,7 @@ on submission and the second one (DNS: vor....) for testing.
 
 ## Protocol
 Both clients and the server should send messages conforming to the following
-protocol over UDP connections. It is important that you use the exact length in 
+protocol over UDP. It is important that you use the exact length in 
 all fields, and send via network order endian where applicable.
 
 ![](../images/protocol.png)
