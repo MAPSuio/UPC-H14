@@ -150,7 +150,7 @@ __Status__: Ferdig, men ikke godkjent
 ### [Roundabout madness](rabout)
 __Algoritme/problemsjanger__: Problemløsning  
 __Forfatter__: olalia  
-__Løst av__: olalia  
+__Løst av__: olalia, martinvl  
 __Status__: Ferdig, og godkjent av Håkon
 
 ### [Walking the dog](walk)
