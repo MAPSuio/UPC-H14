@@ -32,10 +32,12 @@ he becomes sick is obviously not possible. This means that if a patient becomes
 sick on day 3 with 2 days to live, he must be treated on day 3 or 4 in order to
 live.
 
-We will assume that all of Erna's health ministers will execute their job
-perfectly; they all manage the patient queue in an optimal way. It takes a day
-for a minister to resign and for a new one to take over, so even if two or more
-patients die on the same day, only one new minister is needed. Erna's term ends
+For the sake of predictability (and not overestimating the capacity of the
+norwegian health service), we will assume that only one patient can be treated
+per day. If there are multiple patients waiting, the patient who has the
+shortest amount of time left to live will be treated first. It takes a day for
+a minister to resign and for a new one to take over, so if two or more patients
+die on the same day, still only one new minister is needed. Erna's term ends
 when all patients are either treated or dead.
 
 ## Input
@@ -65,12 +67,12 @@ through the term.
 ## Sample input
 ```
 5 5
-1 2 4 4 5
-4 1
+0 1 3 3 4
+3 1
+5 1
 6 1
 7 1
-8 1
-8 1
+7 1
 ```
 
 ## Sample output

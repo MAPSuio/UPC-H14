@@ -131,16 +131,11 @@ int transit(grid *g, int x1, int y1, int x2, int y2) {
 	queue *q;
 	int *g2;
 	int i, j, v, a;
-	// If it's on top of us, don't go
-	// on top of each other: return 0 because they are already there
-	if(x1 == x2 && y1 == y2) {
-		return 0;
-	}
 
 	// directly above or below or to the sides
 	if(((x1+1 == x2 || x1-1 == x2) && y1 == y2)
 	|| ((y1+1 == y2 || y1-1 == y2) && x1 == x2)) {
-		return 1;
+		return 0;
 	}
 
 	// run a BFS from both sides
@@ -190,8 +185,6 @@ int transit(grid *g, int x1, int y1, int x2, int y2) {
 				if((e->sign * v) > 0) goto no;
 				if(v == 0) {
 					g2[(e2->y*g->x) + e2->x] = g2[(e->y*g->x) + e->x] + e->sign;
-					printf("(%i, %i) -> (%i, %i) (%i)\n", e->x, e->y, e2->x, e2->y,
-							g2[(e2->y*g->x)+e2->x]);
 					queue_add(q, e2);
 					continue;
 				}
@@ -203,7 +196,7 @@ int transit(grid *g, int x1, int y1, int x2, int y2) {
 					free(e2);
 					free(e);
 					queue_destroy(q);
-					return a+v;
+					return a+v-1;
 				}
 no:
 				free(e2);
@@ -217,79 +210,48 @@ no:
 }
 
 int main() {
-	int x, y, m, i, x2, y2, r;
-	char buf[20];
+	int x, y, x2, y2, r;
+	int ax=0, ay=0, bx=0, by=0;
+	char c;
 	// true = open
 	grid *g;
 
-	scanf("%d %d %d", &x, &y, &m);
+	scanf("%d %d", &x, &y);
+	/* Default to all cells open */
 	g = grid_init(x,y);
 
-	for(i=0;i<m;i++) {
-		scanf("%s", buf);
-		if(!strcmp(buf, "CLOSED")) {
-			scanf("%d %d", &x, &y);
-			grid_set(g, x, y, false);
-		} else if(!strcmp(buf, "REQUEST")) {
-			scanf("%d %d %d %d", &x, &y, &x2, &y2);
-			r = transit(g, x, y, x2, y2);
-			if(r == -1) printf("STAY WHERE YOU ARE\n");
-			else printf("%i\n", r);
-		} else if(!strcmp(buf, "OPENED")) {
-			scanf("%d %d", &x, &y);
-			grid_set(g, x, y, true);
-		} else {
-			printf("UNKNOWN event: %s\n", buf);
-			return 1;
+	y2 = x2 = 0;
+	while(y2 < y) {
+		// assume x2 and y2 are new positions
+		c = getchar();
+		if(c == '\n' || c == '\t' || c == '\r' || c == '\n') continue;
+		if(c == -1) break;
+
+		if(c == 'X')
+			grid_set(g, x2, y2, false);
+		else if(c == 'S') {
+			ax = x2;
+			ay = y2;
+		}
+		else if(c == 'G') {
+			bx = x2;
+			by = y2;
+		}
+
+		/* increment position */
+		x2++;
+		if (x2 >= x) {
+			x2 = x2 % x;
+			y2++;
 		}
 	}
+	/* We are ready */
+	// grid_print(g);
+
+	r = transit(g, ax, ay, bx, by);
+	if(r == -1) printf("STAY WHERE YOU ARE\n");
+	else printf("%i\n", r);
 
 	grid_destroy(g);
 	return 0;
 }
-/*
-X, Y, M = map(int, stdin.next().split())
-
-opened = [[True]*Y for i in xrange(X)]
-
-def bfs(start, goal):
-    global opened, X, Y
-    dist = [[-1]*Y for i in xrange(X)]
-
-    dist[start[0]][start[1]] = 0
-    q = [start]
-
-    while q:
-        nq = []
-
-        for p in q:
-            if p == goal:
-                return dist[goal[0]][goal[1]]
-
-            for dp in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-                np = (p[0] + dp[0], p[1] + dp[1])
-
-                if np[0] < 0 or np[0] >= X or np[1] < 0 or np[1] >= Y:
-                    continue
-
-                if dist[np[0]][np[1]] == -1 and opened[np[0]][np[1]]:
-                    dist[np[0]][np[1]] = dist[p[0]][p[1]] + 1
-                    nq.append(np)
-
-        q = nq
-
-    return -1
-
-for data in (line.split() for line in stdin):
-    if data[0] == 'OPENED' or data[0] == 'CLOSED':
-        x, y = map(int, data[1:])
-        opened[x][y] = data[0] == 'OPENED'
-    else:
-        x1, y1, x2, y2 = map(int, data[1:])
-        dist = bfs((x1, y1), (x2, y2))
-
-        if dist == -1:
-            print 'STAY WHERE YOU ARE'
-        else:
-            print dist
-	    */

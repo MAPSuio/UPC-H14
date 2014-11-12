@@ -1,3 +1,8 @@
+/*
+@EXPECTED_RESULTS@: CORRECT
+*/
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class martinvl {
@@ -12,6 +17,7 @@ public class martinvl {
         int f = in.nextInt();
 
         Graph g = new Graph(n + 2);
+        visited = new boolean[n + 2];
         int oslo = 0;
         int trondheim = n + 1;
 
@@ -33,11 +39,14 @@ public class martinvl {
         System.out.println(FFA(g, oslo, trondheim));
     }
 
+    static boolean[] visited;
+
     static int FFA(Graph g, int source, int sink) {
         int maxFlow = 0;
         int flow;
 
         while ((flow = increaseFlow(g, sink, source, INF)) != 0) {
+            Arrays.fill(visited, false);
             maxFlow += flow;
         }
 
@@ -50,7 +59,7 @@ public class martinvl {
         }
 
         for (Edge e = g.edges[node]; e != null; e = e.next) {
-            if (e.visited) {
+            if (visited[e.to]) {
                 continue;
             }
 
@@ -60,13 +69,13 @@ public class martinvl {
                 continue;
             }
 
-            e.visited = true;
+            visited[e.to] = true;
             int flow = increaseFlow(g, sink, e.to, newCap);
-            e.visited = false;
 
             if (flow == 0) {
                 continue;
             }
+            visited[e.to] = false;
 
             e.flow += flow;
             e.rev.flow -= flow;

@@ -8,55 +8,47 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
-#include "log.h"
-
 static int udp_socket = 0;
 static int BUF_SIZ = 256;
 static int PORT = 3950;
 
 void net_init() 
 {
-	struct sockaddr_in addr;
-	int err;
 	udp_socket = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
 	if(udp_socket < 0) {
-		_ERR("Failed to create local UDP socket");
         perror("socket()");
 		exit(-1);
 	}
-	
-	memset(&addr, 0, sizeof(struct sockaddr_in));
-	addr.sin_family			= AF_INET;
-	addr.sin_addr.s_addr 	= INADDR_ANY;
-	addr.sin_port			= htons(PORT);
-
-	err = bind(udp_socket, (struct sockaddr*)&addr, sizeof(struct sockaddr_in));
-	if (err < 0) {
-		_ERR("Failed to bind to port %d", PORT);
-		exit(-1);
-	}
-
 }
 
 void net_send()
 {
+    struct sockaddr_in addr;
+    struct hostent host;
     int retval;
     char msg[256];
     int msg_size;
 
+    /*
+	memset(&addr, 0, sizeof(struct sockaddr_in));
+	addr.sin_family      = AF_INET;
+	//addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+	addr.sin_addr.s_addr = inet_addr("178.62.248.162");
+	addr.sin_port        = htons(PORT);
+    */
 	struct hostent* host_entry_ptr;
 	struct sockaddr_in dest_addr;
 
 	dest_addr.sin_family = AF_INET;
-	host_entry_ptr = gethostbyname("vor.ifi.uio.no");
-	//host_entry_ptr = gethostbyname("178.62.248.162");
+	//host_entry_ptr = gethostbyname("localhost");
+	//host_entry_ptr = gethostbyname("vor.ifi.uio.no");
+	host_entry_ptr = gethostbyname("178.62.248.162");
 
 	memcpy((char*) &(dest_addr.sin_addr.s_addr), host_entry_ptr->h_addr_list[0],
 		host_entry_ptr->h_length);
 
 	dest_addr.sin_port = htons(3950);
-
 
     msg_size = create_message(msg);
 
@@ -64,7 +56,6 @@ void net_send()
 			sizeof(dest_addr));
 
     if (retval == -1) {
-        _ERR("Sendto failed: ");
         perror("sendto()");
         exit(-1);
     }
@@ -85,10 +76,11 @@ void net_recv()
 
 
 	if (recvd_bytes < 0) {
-		_ERR("Failed to recv data:");
 		perror("recvfrom()");
         exit(-1);
 	} 
+
+    int answer = 
 
     printf("%s\n", &buffer[sizeof(uint8_t) * 4]);
 }
@@ -100,6 +92,8 @@ int create_message(char* msg)
     uint8_t type;
     uint8_t input1;
     uint8_t input2;
+    uint32_t test1;
+    uint32_t test2;
 
     /* Message size */
     int size = sizeof(uint8_t) * 4;
@@ -113,8 +107,8 @@ int create_message(char* msg)
     /* Data assignation */
     length = size;
     type   = 0x02;
-    input1 = 0x02;
-    input2 = 0x02;
+    scanf("%hhd", &input1);
+    scanf("%hhd", &input2);
 
     /* Index declaration */
     length_index = 0;

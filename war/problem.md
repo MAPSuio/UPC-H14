@@ -10,8 +10,8 @@ War consists of rounds, where each round consists of the following steps:
 * Each player draws a card from the top of the stack and puts it on the table.
 * The player with the higher card wins and collects all cards on the table.
 * If the cards are equal, the cards remain on the table, and the players draw three new cards from their stack and place them face down on the table.
-* The first player to lose all of his/her cards lose the game.
-* If the players lose their cards at the same round or grow tired of the game, it's a draw.
+* If you don't have enough cards, you lose. If neither player has enough cards, the one who runs out first loses.
+* If the players lose their cards at the same time or grow tired of the game, it's a draw.
 
 When a player wins cards, they are placed on the bottom of the stack in this order:
 * The winning player places his/her own cards, the card which was placed first on the table goes first.

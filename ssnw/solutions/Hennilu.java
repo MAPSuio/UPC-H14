@@ -19,8 +19,8 @@ public class Hennilu {
     private static final int PORT        = 3950;
     private static final int PADDING     = 4;
     private static final int BYTE        = 8;
-private static final String HOST     = "178.62.248.162";
-//private static final String HOST     = "norge";
+    //private static final String HOST     = "localhost";
+    private static final String HOST     = "178.62.248.162";
     private static Scanner stdin;
 
     public static void main(String[] args) {
@@ -62,9 +62,11 @@ private static final String HOST     = "178.62.248.162";
 
             /* Await response */
             socket.receive(packet);
+            String packetStringLength = new String(packet.getData());
+            byte packetLength = (byte) packetStringLength.substring(0,1).charAt(0);
 
             /* Decode and print the response */
-            System.out.print(method2(packet));
+            System.out.println(method2(packet, (int) packetLength));
 
         } catch(IOException scn) {
             System.out.println("Scanner exception!");
@@ -83,7 +85,7 @@ private static final String HOST     = "178.62.248.162";
      * Takes in a packet and uses substrings to return a string
      * @return A new string containing only the hash
      */
-    public static String method1(DatagramPacket packet) {
+    public static String method1(DatagramPacket packet, int packetLength) {
         String encodedData = new String(packet.getData());
         return encodedData.substring(PADDING);
     }
@@ -92,12 +94,13 @@ private static final String HOST     = "178.62.248.162";
      * Takes in a packet and uses iterative adding to return a string
      * @return A new string containing only the hash
      */
-    public static String method2(DatagramPacket packet) {
-        byte[] tester = packet.getData();
-        byte[] byteResult = new byte[PACKET_SIZE - PADDING];
-        int byteCounter = 0;
+    public static String method2(DatagramPacket packet, int packetLength) {
+        int hashLength    = packetLength - PADDING;
+        int byteCounter   = 0;
+        byte[] tester     = packet.getData();
+        byte[] byteResult = new byte[hashLength];
 
-        for (int i = PADDING; i < tester.length; i++) {
+        for (int i = PADDING; i < packetLength; i++) {
             byteResult[byteCounter++] += tester[i];
         }
         return new String(byteResult);
@@ -111,7 +114,6 @@ private static final String HOST     = "178.62.248.162";
      */
     public static byte getInput() throws IOException {
         int input = stdin.nextInt();
-        stdin.nextLine();
         return (byte) input;
     }
 }

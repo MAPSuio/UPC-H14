@@ -88,12 +88,13 @@ __Status__: Ferdig, og godkjent
 __Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent (Håkon)
 
 ### [Festival area](festival)
 __Algoritme/problemsjanger__: Areal av polygon  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Godkjent av Ola
 
 ### [Happy birthday to you](birthday)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
@@ -120,7 +121,7 @@ __Løst av__: hennilu
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent av Håkon
 
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
@@ -138,12 +139,13 @@ __Status__: Ferdig, men ikke godkjent
 __Algoritme/problemsjanger__: Sortering, finne element  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Håkon
 
 ### [Quidditch breakup](quid)
 __Algoritme/problemsjanger__: Min cut  
 __Forfatter__: martinvl  
-__Løst av__: martinvl
+__Løst av__: martinvl  
+__Status__: Ferdig, men ikke godkjent
 
 ### [Roundabout madness](rabout)
 __Algoritme/problemsjanger__: Problemløsning  
@@ -165,4 +167,5 @@ __Status__: Ferdig, men ikke godkjent
 ### [War](war)
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
-__Løst av__: hawken
+__Løst av__: hawken  
+__Status__: Ferdig, men ikke godkjent

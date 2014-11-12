@@ -1,3 +1,7 @@
+/*
+# @EXPECTED_RESULTS@: CORRECT
+*/
+
 #include<iostream>
 
 using namespace std;

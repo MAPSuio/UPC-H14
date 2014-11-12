@@ -77,10 +77,11 @@ int test(testcase *t) {
             q_in(&p1bet, p1card);
             q_in(&p2bet, p2card);
             for(i=0;i<3;i++) {
-                if((p1card = q_rem(&p1stack)))
-                    q_in(&p1bet, p1card);
-                if((p2card = q_rem(&p2stack)))
-                    q_in(&p2bet, p2card);
+                if(!p1stack.start || !p2stack.start) break;
+                p1card = q_rem(&p1stack);
+                p2card = q_rem(&p2stack);
+                q_in(&p1bet, p1card);
+                q_in(&p2bet, p2card);
             }
         } else if(p1card->card > p2card->card) {
             while((tmp = q_rem(&p1bet)))
@@ -100,6 +101,9 @@ int test(testcase *t) {
             q_in(&p2stack, p1card);
         }
 	iterations++;
+        if(iterations >= 100000) {
+		break;
+	}
     }
     i = p1stack.start != NULL ? 1 : 0;
     j = p2stack.start != NULL ? 1 : 0;
@@ -110,7 +114,7 @@ int test(testcase *t) {
 
     fprintf(stderr, "DEBUG: iterations: %llu\n", iterations);
 
-    if(i == 0 && j == 0) {
+    if((i == 0 && j == 0) || iterations >= 100000) {
         return  0; // draw
     } else if(i == 0) {
         return -1; // player2
