@@ -157,7 +157,7 @@ __Status__: Godkjent av Håkon
 ### [Something, something network](ssnw)
 __Algoritme/problemsjanger__: Datakommunikasjon  
 __Forfatter__: sjurtf/hennilu  
-__Løst av__: sjurtf/hennilu  
+__Løst av__: sjurtf/hennilu/martinvl  
 __Status__: Ferdig, godkjent av Martin
 
 ### [War](war)
