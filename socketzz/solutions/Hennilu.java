@@ -19,8 +19,8 @@ public class Hennilu {
     private static final int PORT        = 3950;
     private static final int PADDING     = 4;
     private static final int BYTE        = 8;
-    private static final String HOST     = "localhost";
-    //private static final String HOST     = "178.62.248.162";
+    //private static final String HOST     = "localhost";
+    private static final String HOST     = "178.62.248.162";
     private static Scanner stdin;
 
     public static void main(String[] args) {
