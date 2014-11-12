@@ -12,12 +12,10 @@ public class hawken {
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
         Queue<Integer> p1stack = qgen(), p2stack = qgen();
         Queue<Integer> p1bet = qgen(), p2bet = qgen();
         int p1card, p2card;
-
-        int n, m;
+        int n, m, iter = 0;
 
         n = in.nextInt();
         m = in.nextInt();
@@ -33,10 +31,9 @@ public class hawken {
                 p1bet.add(p1card);
                 p2bet.add(p2card);
                 for(int i = 0; i < 3; i++){
-                    if(p1stack.peek() != null)
-                        p1bet.add(p1stack.poll());
-                    if(p2stack.peek() != null)
-                        p2bet.add(p2stack.poll());
+                    if(p1stack.peek() == null || p2stack.peek() == null) break;
+                    p1bet.add(p1stack.poll());
+                    p2bet.add(p2stack.poll());
                 }
             } else if(p1card > p2card) {
                 while(p1bet.peek() != null) {
@@ -57,8 +54,10 @@ public class hawken {
                 }
                 p2stack.add(p1card);
             }
+	    iter++;
+	    if(iter == 100000) break;
         }
-        if(p1stack.peek() == null && p2stack.peek() == null) {
+        if((p1stack.peek() == null && p2stack.peek() == null) || iter >= 100000) {
             System.out.println("draw");
         } else if(p1stack.peek() != null) {
             System.out.println("you");

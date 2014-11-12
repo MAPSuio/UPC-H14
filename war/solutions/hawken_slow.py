@@ -34,14 +34,14 @@ while len(p1stack) and len(p2stack):
         p2bet.append(p2card)
         # Put three new as bet
         for i in xrange(0,3):
-            if len(p1stack):
-                v = p1stack[0]
-                p1stack = p1stack[1:]
-                p1bet.append(v)
-            if len(p2stack):
-                v = p2stack[0]
-                p2stack = p2stack[1:]
-                p2bet.append(v)
+            if not len(p1stack) or not len(p2stack):
+                break
+            v = p1stack[0]
+            p1stack = p1stack[1:]
+            p1bet.append(v)
+            v = p2stack[0]
+            p2stack = p2stack[1:]
+            p2bet.append(v)
     elif p1card > p2card:
         while len(p1bet):
             v = p1bet[0]
@@ -71,6 +71,8 @@ while len(p1stack) and len(p2stack):
 
         p2stack.append(p1card)
     iter = iter + 1
+    if iter == 100000:
+        break
 
 if (not len(p1stack) and not len(p2stack)) or iter >= 100000:
     print "draw"
