@@ -34,10 +34,8 @@ public class joakimjl{
                 noEdges.add(node);
             }
         }
-        noEdges.sort(Comparator.<Node>naturalOrder());
 
         ArrayList<Node> result = new ArrayList<Node>();
-        ArrayList<Node> queue = new ArrayList<Node>();
 
         while(!noEdges.isEmpty()){
             Node node = noEdges.remove(0);
@@ -46,17 +44,10 @@ public class joakimjl{
             for(Node neighbour: node.getOutgoing()){
                 neighbour.removeIncomingEdge(node);
                 if(neighbour.getIncoming().size() == 0){
-                    queue.add(neighbour);
+                    noEdges.add(neighbour);
                 }
             }
-
-            if(noEdges.isEmpty() && !queue.isEmpty()){
-                queue.sort(Comparator.<Node>naturalOrder());
-                noEdges.addAll(queue);
-                queue.clear();
-            }
         }
-
         printResult(result);
     }
 
