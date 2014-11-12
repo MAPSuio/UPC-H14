@@ -1,5 +1,5 @@
 /*
-@EXPECTED_RESULTS@: TIMEOUT
+@EXPECTED_RESULTS@: TIMELIMIT
 */
 
 #include <stdio.h>
