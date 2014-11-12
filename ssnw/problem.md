@@ -1,22 +1,22 @@
 # Something, something network
-Making applications in 2014 often requires to communicate with servers or other
+Most applications in 2014 often have to communicate with servers or other
 clients. An important aspect of this communication is to have a well defined
-protocol in order for messages to be understood correctly by all parties.
+protocol, so that messages are understood correctly by all parties.
 
-In this task you must be able to transmit two number to our server using our
+In this task you must be able to transmit two numbers to our server using our
 protocol. The server will reply with a key that can vary in length up to the
 total message size (2<sup>8</sup> bytes).
 
 Our server (IP `178.62.248.162`) is running at UDP port `3950`. However, this
 server is only for submission. For testing, we have another address: (DNS
-`vor.ifi.uio.no`) @ UDP port `3950`. We assume that you hardcode these
+`vor.ifi.uio.no`) on UDP port `3950`. We assume that you hardcode these
 parameters into your code. Double check that you are using the first IP (178...)
 on submission and the second one (DNS: vor....) for testing.
 
 ## Protocol
 Both clients and the server should send messages conforming to the following
-protocol over UDP sockets. It is important that you use the exact length in all
-fields, and send via network order endian where applicable.
+protocol over UDP connections. It is important that you use the exact length in 
+all fields, and send via network order endian where applicable.
 
 ![](../images/protocol.png)
 
@@ -27,7 +27,7 @@ fields, and send via network order endian where applicable.
 - Input field 1/2: numbers read from stdin
 
 ## Input
-Input consists of two space separated integers.
+Input consists of two space separated numbers.
 
 ## Output
 Your program should output the key as received from the server.
