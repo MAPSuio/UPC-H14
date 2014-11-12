@@ -3,6 +3,7 @@
 */
 
 #include<iostream>
+#include<iomanip>
 #include<cmath>
 
 #define sq(x) ((x)*(x))
@@ -27,5 +28,5 @@ int main() {
     xi = xii;
     yi = yii;
   } while(n-->0);
-  cout<<abs(area)<<endl;
+  cout<<setprecision(9)<<abs(area)<<endl;
 }

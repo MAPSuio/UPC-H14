@@ -16,7 +16,7 @@ can sell, they must know the area of the festival area. Can you help them out?
 
 ## Input
 The first line of input contains an integer _N_, the number of fence posts in
-the fence.  
+the fence.
 
 Then follows _N_ lines describing the fence posts. Line _i_ contains two
 numbers _x_ and _y_, the coordinates (_x_, _y_) of fence post _i_. The fence
@@ -25,7 +25,8 @@ _i + 1_ and _i - 1_. The last fence post is also connected to the first post.
 
 ## Output
 Print the area of the festival area. Solutions with an absolute or relative
-error less than 10<sup>-8</sup> will be accepted!
+error less than 10<sup>-8</sup> will be accepted, so make sure to print enough
+decimals!
 
 ## Constraints
 3 &le; _N_ &le; 10<sup>5</sup>
