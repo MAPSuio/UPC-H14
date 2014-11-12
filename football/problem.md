@@ -18,13 +18,16 @@ A sorted list where the team who places first in the league are printed first.
 Number of teams in a league is always greater than 1 and less or equal to 20.
 
 ## Sample input
+```
 Liverpool BEFORE ManchesterUnited
 Chelsea AFTER ManchesterUnited
 Chelsea AFTER Liverpool
+```
 
 
 ## Sample output
+```
 Liverpool
 ManchesterUnited
 Chelsea
-
+```
