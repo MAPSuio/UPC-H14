@@ -185,7 +185,7 @@ int transit(grid *g, int x1, int y1, int x2, int y2) {
 				if(e2->y < 0)     goto no;
 				if(e2->y >= g->y) goto no;
 				if(e2->x < 0)     goto no;
-				iif(e2->x >= g->x) goto no;
+				if(e2->x >= g->x) goto no;
 				// we cannot touch this intersection
 				if(!grid_get(g, e2->x, e2->y)) goto no;
 				// Check if it's opposite, zero or same
