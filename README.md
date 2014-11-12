@@ -99,7 +99,8 @@ __Status__: Godkjent av Ola og Håkon
 ### [Happy birthday to you](birthdays)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
 __Forfatter__: joakimjl  
-__Løst av__: joakimjl, olalia
+__Løst av__: joakimjl, olalia, martinvl  
+__Status__: Godkjent av Martin
 
 ### [A healthy supply of ministers](healthy)
 __Algoritme/problemsjanger__: Heap  
@@ -152,7 +153,7 @@ __Status__: Ferdig, og godkjent av Håkon og Martin
 ### [Walking the dog](walk)
 __Algoritme/problemsjanger__: Problemløsning/analyse  
 __Forfatter__: olalia  
-__Løst av__: hawken
+__Løst av__: hawken  
 __Status__: Godkjent av Håkon
 
 ### [Something, something network](ssnw)
