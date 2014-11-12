@@ -1,6 +1,6 @@
 # A walk in the park
 
-![](<path to image here>)
+![](../images/walk.jpg)
 
 Angwusnasomtaqa and Bob are walking their dog Chavatangakwunua.  They are
 walking along a long path with trees appearing now and then.  The distances
@@ -36,15 +36,23 @@ One single line with the name of winner.
 All the input distances are one digit integers larger than 0.
 
 ## Sample input 1
+```
 3
 5 6 7 8
+```
 
 ## Sample output 1
+```
 Angwusnasomtaqa
+```
 
 ## Sample input 2
+```
 2
 1 1 1
+```
 
 ## Sample output 2
+```
 Bob
+```
