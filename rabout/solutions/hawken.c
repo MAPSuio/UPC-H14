@@ -1,5 +1,5 @@
 /*
-@EXPECTED_RESULTS@: CORRECT
+@EXPECTED_RESULTS@: TIMELIMIT
 */
 
 #include <stdio.h>
