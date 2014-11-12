@@ -1,3 +1,7 @@
+/*
+@EXPECTED_RESULTS@: CORRECT
+*/
+
 /**
  * Solution to quad by Matias Holte (kjetimh@ulrik.uio.no). Very much inspired
  * by (copied from) http://backtrack-it.blogspot.no/2013/03/max-flow-algorithm-with-sample-c-code.html
