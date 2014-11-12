@@ -110,7 +110,8 @@ __Status__: Ferdig, men ikke godkjent
 ### [I'd rather walk alone](football)
 __Algoritme/problemsjanger__: Topografisk sortering  
 __Forfatter__: joakimjl  
-__Løst av__: joakimjl, olalia
+__Løst av__: joakimjl, olalia, martinvl
+__Status__: Godkjent av Martin
 
 ### [Kristiansand road work](kristian)
 __Algoritme/problemsjanger__: BFS korteste vei  
