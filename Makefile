@@ -31,7 +31,7 @@ TGT += $(addprefix rabout/solutions/,    olalia olalia_slow)
 TGT += $(addprefix ssnw/server/,         main)
 REM += $(addprefix ssnw/server/,         main.o irq.o network.o)
 TGT += $(addprefix ssnw/solutions/,      hennilu Hennilu.class sjurtf)
-TGT += $(addprefix walk/solutions/,      olalia)
+TGT += $(addprefix walk/solutions/,      olalia hawken)
 TGT += $(addprefix war/scripts-stuff/,   hawken cdedup)
 TGT += $(addprefix war/solutions/,       hawken hawken.class joakimjl.class)
 
