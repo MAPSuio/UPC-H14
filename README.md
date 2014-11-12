@@ -156,7 +156,8 @@ __Status__: Ferdig, og godkjent av Håkon og Martin
 ### [Walking the dog](walk)
 __Algoritme/problemsjanger__: Problemløsning/analyse  
 __Forfatter__: olalia  
-__Løst av__:
+__Løst av__: hawken
+__Status__: Godkjent av Håkon
 
 ### [Something, something network](ssnw)
 __Algoritme/problemsjanger__: Datakommunikasjon  

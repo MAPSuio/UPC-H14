@@ -2,8 +2,6 @@
 # @EXPECTED_RESULTS@: CORRECT
 */
 
-//
-
 #include <stdio.h>
 
 int main(){
