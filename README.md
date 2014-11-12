@@ -99,7 +99,7 @@ __Status__: Godkjent av Ola og Håkon
 ### [Happy birthday to you](birthdays)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
 __Forfatter__: joakimjl  
-__Løst av__: joakimjl
+__Løst av__: joakimjl, olalia
 
 ### [A healthy supply of ministers](healthy)
 __Algoritme/problemsjanger__: Heap  
