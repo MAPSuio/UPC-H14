@@ -112,11 +112,6 @@ __Algoritme/problemsjanger__: Topografisk sortering
 __Forfatter__: joakimjl  
 __Løst av__: joakimjl
 
-### [The Fibonacci Rabbits](fibez)
-__Algoritme/problemsjanger__: Fibonacci  
-__Forfatter__: hennilu  
-__Løst av__: hennilu
-
 ### [Kristiansand road work](kristian)
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
