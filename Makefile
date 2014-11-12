@@ -3,6 +3,8 @@ CFLAGS=-O3 -Wall -Wextra -march=native --std=gnu99
 LDLIBS=-lz
 CXX=g++
 CXXFLAGS=$(CFLAGS)
+# Ignore compilation fails for java
+IGNOREJAVA=true
 
 # Targets to make
 TGT =
@@ -11,7 +13,7 @@ TGT =
 REM =
 
 # Add one for your problem here, do not add targets here
-TGT += $(addprefix artifi/solutions/,    martinvl martinvl.class)
+TGT += $(addprefix artifi/solutions/,    martinvl martinvl.class hawken)
 TGT += $(addprefix birthdays/solutions/, joakimjl joakimjl.class)
 TGT += $(addprefix bitmean/solutions/,   martinvl.class martinvl_wrong.class martinvl_slow.class)
 TGT += $(addprefix festival/solutions/,  hawken hawken_wrong kjetimh kjetimh_wrong martinvl.class)
@@ -46,4 +48,4 @@ ssnw/server/main: $(addprefix ssnw/server/, main.o network.o irq.o)
 
 ### java rule, assume one .java compiles the equivalently named .class
 %.class: %.java
-	javac $<
+	javac $< || $(IGNOREJAVA)

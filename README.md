@@ -88,7 +88,7 @@ __Status__: Ferdig, og godkjent
 __Algoritme/problemsjanger__: Sjekke om en streng er `yes`  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, og godkjent (Håkon)
 
 ### [Festival area](festival)
 __Algoritme/problemsjanger__: Areal av polygon  
