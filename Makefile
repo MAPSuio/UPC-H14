@@ -1,8 +1,8 @@
 CC=gcc
-CFLAGS=-O3 -Wall -Wextra -march=native --std=gnu99
+CFLAGS=-O3 -Wall -Wextra -march=native --std=gnu11
 LDLIBS=-lz
 CXX=g++
-CXXFLAGS=$(CFLAGS)
+CXXFLAGS=-O3 -Wall -Wextra -march=native --std=gnu++11
 # Ignore compilation fails for java
 IGNOREJAVA=true
 
@@ -14,7 +14,7 @@ REM =
 
 # Add one for your problem here, do not add targets here
 TGT += $(addprefix artifi/solutions/,    martinvl martinvl.class hawken)
-TGT += $(addprefix birthdays/solutions/, joakimjl joakimjl.class)
+TGT += $(addprefix birthdays/solutions/, joakimjl) # MISSING java8
 TGT += $(addprefix bitmean/solutions/,   martinvl.class martinvl_wrong.class martinvl_slow.class)
 TGT += $(addprefix festival/solutions/,  hawken hawken_wrong kjetimh kjetimh_wrong martinvl.class)
 TGT += $(addprefix fibez/solutions/,     hennilu.class)
@@ -37,6 +37,7 @@ TGT += $(addprefix war/solutions/,       hawken hawken.class joakimjl.class)
 
 ### Basic make rules
 .PHONY: all clean
+
 all: $(TGT)
 
 clean:
