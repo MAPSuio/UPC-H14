@@ -94,7 +94,7 @@ __Status__: Ferdig, og godkjent (Håkon)
 __Algoritme/problemsjanger__: Areal av polygon  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Godkjent av Ola
+__Status__: Godkjent av Ola og Håkon
 
 ### [Happy birthday to you](birthday)
 __Algoritme/problemsjanger__: Skuddår og dato-iterering  
