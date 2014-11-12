@@ -140,7 +140,7 @@ __Status__: Ferdig, godkjent av Håkon
 __Algoritme/problemsjanger__: Min cut  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Matias
 
 ### [Roundabout madness](rabout)
 __Algoritme/problemsjanger__: Problemløsning  
