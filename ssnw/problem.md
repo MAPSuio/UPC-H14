@@ -3,12 +3,15 @@ Making applications in 2014 often requires to communicate with servers or other
 clients. An important aspect of this communication is to have a well defined
 protocol in order for messages to be understood correctly by all parties.
 
-In this task you must be able to transmit two integers to our server using our
+In this task you must be able to transmit two number to our server using our
 protocol. The server will reply with a key that can vary in length up to the
 total message size (2<sup>8</sup> bytes).
 
-Our server (IP `178.62.248.162`) is running at UDP port `3950`. Feel free to
-use this server for testing and for submission.
+Our server (IP `178.62.248.162`) is running at UDP port `3950`. However, this
+server is only for submission. For testing, we have another address: (DNS
+`vor.ifi.uio.no`) @ UDP port `3950`. We assume that you hardcore these
+parameters into your code. Double check that you are using the first IP (178...)
+on submission and the second one (DNS: vor....) for testing.
 
 ## Protocol
 Both clients and the server should send messages conforming to the following
