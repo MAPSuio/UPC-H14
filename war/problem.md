@@ -23,7 +23,7 @@ When a player wins cards, they are placed on the bottom of the stack in this
 order:
 
 1. The player puts his own cards from the table _under_ his own stack, in the order they were put on the table
-2. The player flips the opponents cards from the table and puts them in his own stack the same way
+2. The player puts the opponents cards from the table in his own stack the same way
 
 ### Example
 Your stack is `4, 1, 2, 3, 3, 8, 7` (`4` being the next card you will draw).
