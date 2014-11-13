@@ -43,7 +43,7 @@ the order they were put on the table, making the stack `8, 7, 4, 1, 2, 3, 3`.
 You put Mike's cards from the table (`4, 3, 2, 1, 2`) in your own stack the same
 way, making it `8, 7, 4, 1, 2, 3, 3, 4, 3, 2, 1, 2`.
 
-Mike cannot start next round because he has no cards to play, so you win the
+Mike cannot start the next round because he has no cards to play, so you win the
 game.
 
 This game lasted two rounds.
@@ -81,15 +81,15 @@ If there are 100 000 rounds or more, they call it a draw
 ```
 
 ## Sample gameplay
-* Your stacks at the beginning: [2 3 1] and [1 2 3]
+* Your stacks at the beginning: `2, 3, 1` and `1, 2, 3`
 * You draw 2, Mike draws 1, you win
-* [3 1 2 1] and [2 3]
+* `3, 1, 2, 1` and `2, 3`
 * You draw 3, Mike draws 2, you win
-* [1 2 1 3 2] and [3]
+* `1, 2, 1, 3, 2` and `3`
 * You draw 1, Mike draws 3, Mike wins
-* [2 1 3 2] and [3 1]
+* `2, 1, 3, 2` and `3, 1`
 * You draw 2, Mike draws 3, Mike wins
-* [1 3 2] and [1 3 2]
+* `1, 3, 2` and `1, 3, 2`
 * You draw 1, Mike draws 1
 * You try to draw three cards but your stack runs empty
 * Mike tries to draw three cards, but his stack also runs empty
