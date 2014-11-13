@@ -20,8 +20,8 @@ Help the inhabitants of Kristiansand out finding the shortest possible route
 they have to drive between a given pair of intersections in the city.
 
 ## Input
-The first line of input consists of two integers _X_, _Y_ the size of the city
-grid.
+The first line of input consists of two integers _X_ and _Y_, the size of the
+city grid.
 
 Then follows _Y_ lines, each with _X_ characters, representing the city grid.
 There will be exactly one `S` and exactly one `G` in the grid, denoting the
