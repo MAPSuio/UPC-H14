@@ -14,14 +14,14 @@ REM =
 
 # Add one for your problem here, do not add targets here
 TGT += $(addprefix artifi/solutions/,    martinvl martinvl.class hawken)
-TGT += $(addprefix birthdays/solutions/, joakimjl) # MISSING java8
+TGT += $(addprefix birthdays/solutions/, joakimjl olalia) # MISSING java8
 TGT += $(addprefix bitmean/solutions/,   martinvl.class martinvl_wrong.class martinvl_slow.class)
-TGT += $(addprefix festival/solutions/,  hawken hawken_wrong kjetimh kjetimh_wrong martinvl.class)
-TGT += $(addprefix fibez/solutions/,     hennilu.class)
-TGT += $(addprefix football/solutions/,  joakimjl.class)
+TGT += $(addprefix festival/solutions/,  hawken hawken_wrong kjetimh kjetimh_wrong martinvl.class martinvl_buffered.class)
+TGT += $(addprefix fibez/solutions/,)
+TGT += $(addprefix football/solutions/,  joakimjl.class olalia)
 TGT += $(addprefix healthy/solutions/,   martinvl.class martinvl_slow.class)
 REM += $(addprefix healthy/solutions/,   martinvl\$$1.class martinvl_slow\$$1.class)
-TGT += $(addprefix kristian/solutions/,  hawken hawken_wrong martinvl.class)
+TGT += $(addprefix kristian/solutions/,  hawken hawken_wrong martinvl.class olalia)
 TGT += $(addprefix pinmaker2/solutions/, martinvl_exponential.class martinvl.class martinvl_linear.class martinvl_overflow.class)
 TGT += $(addprefix pinmaker/solutions/,  martinvl martinvl.class martinvl_overflow.class martinvl_slow martinvl_slow.class)
 TGT += $(addprefix prize/solutions/,     hawken martinvl martinvl_slow martinvl_wrong martinvl_wrong2)
