@@ -5,7 +5,7 @@ The first thing to do is to check whether the right drivers or left drivers are
 in majority.  
 
 If there are as many L's as R's in the input, everybody will eventually be
-annihilated and we output "too bad".  
+annihilated and we output "Too Bad".  
 
 If there are more R's than L's, then we are interested in the places with
 surviving right drivers.  The left drivers will not survive, so we don't need

@@ -56,7 +56,7 @@ int main(){
 		memcpy(buf,buf2,size);
 	}
 	if(!r && !l) {
-		printf("Too bad\n");
+		printf("Too Bad\n");
 	} else if(l) {
 		int j;
 		i = WRAP(i);
