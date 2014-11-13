@@ -118,7 +118,7 @@ __Status__: Godkjent av Martin
 __Algoritme/problemsjanger__: BFS korteste vei  
 __Forfatter__: martinvl  
 __Løst av__: martinvl  
-__Status__: Ferdig, og godkjent av Håkon
+__Status__: Ferdig, godkjent av Håkon og Ola
 
 ### [The pinmaker](pinmaker)
 __Algoritme/problemsjanger__: Evaluering av differenslikning  
