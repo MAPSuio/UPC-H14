@@ -3,13 +3,12 @@
 from sys import stdin
 import socket, struct
 
-HOST = '178.62.248.162'
+HOST = '10.133.234.216'
 PORT = 3950
 
 in1, in2 = map(int, stdin.next().split())
 
 # assemble payload
-fmt = '!' # network order
 size = 4*8
 msg_type = 0x02
 

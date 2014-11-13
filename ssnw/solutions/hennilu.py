@@ -4,7 +4,7 @@ from socket import *
 from sys import stdin
 
 #HOST    = 'localhost'
-HOST    = '178.62.248.162'
+HOST    = '10.133.234.216'
 PORT    = 3950
 PADDING = 4 # Padding represents the bytes used for input1/2, length and packet_type
 

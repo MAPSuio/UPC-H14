@@ -7,11 +7,12 @@ In this task you must be able to transmit two numbers to our server using our
 protocol. The server will reply with a key that can vary in length up to the
 total message size (2<sup>8</sup> bytes).
 
-Our server (IP `178.62.248.162`) is running at UDP port `3950`. However, this
-server is only for submission. For testing, we have another address: (DNS
-`vor.ifi.uio.no`) on UDP port `3950`. We assume that you hardcode these
-parameters into your code. Double check that you are using the first IP (178...)
-on submission and the second one (DNS: vor....) for testing.
+Our server (IP `10.133.234.216`) is running at UDP port `3950`. However, this
+server is only for submission and is not accessible from the UiO network. For
+testing, we have another address: (DNS `vor.ifi.uio.no`) on UDP port `3950`. We
+assume that you hardcode these parameters into your code. Double check that you
+are using the first IP (10...) on submission and the second one (DNS: vor....)
+for testing.
 
 ## Protocol
 Both clients and the server should send messages conforming to the following

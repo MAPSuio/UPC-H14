@@ -46,7 +46,7 @@ void net_send()
 
 	dest_addr.sin_family = AF_INET;
 	//host_entry_ptr = gethostbyname("vor.ifi.uio.no");
-	host_entry_ptr = gethostbyname("178.62.248.162");
+	host_entry_ptr = gethostbyname("10.133.234.216");
 
 	memcpy((char*) &(dest_addr.sin_addr.s_addr), host_entry_ptr->h_addr_list[0],
 		host_entry_ptr->h_length);
