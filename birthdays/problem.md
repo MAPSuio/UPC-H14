@@ -22,11 +22,11 @@ For each date range, output how many 29th of february who fell on a friday or
 saturday.
 
 ## Constraints
-0001 &le; _YYYY_ &le; 3000
-01 &le; _DD_ &le; 31
+0001 &le; _YYYY_ &le; 3000  
+01 &le; _DD_ &le; 31  
 01 &le; _MM_ &le; 12
 
-The date range is inclusive
+The date range is inclusive  
 The start and end dates are valid dates
 
 ## Sample input
