@@ -166,4 +166,4 @@ __Status__: Ferdig, godkjent av Martin
 __Algoritme/problemsjanger__: Simulere kortspillet krig  
 __Forfatter__: hawken  
 __Løst av__: hawken, martinvl  
-__Status__: Ferdig, men ikke godkjent
+__Status__: Ferdig, godkjent av Martin
