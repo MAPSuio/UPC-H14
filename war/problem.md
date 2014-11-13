@@ -26,12 +26,12 @@ order:
 2. The player flips the opponents cards from the table and puts them _under_ his own stack
 
 ### Example
-Your stack is currently `8, 7` (8 being the next card you will draw).
-
 In the first round both you and Mike put down a `4`, making it a draw.
 
 In the second round you put down a `3` and Mike put down a `2`, i.e. you win
 the round.
+
+Your stack is currently `8, 7` (8 being the next card you will draw).
 
 You flip your own cards from the table, and put them under your own stack, making
 it `8, 7, 4, 3`.
