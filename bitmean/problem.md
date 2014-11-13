@@ -1,4 +1,6 @@
 # A bit mean
+__Problem ID__: _bitmean_
+
 ![](../images/bitmean.jpg)
 
 A friend of yours, suitably nicknamed Average Joe, is known for annoying

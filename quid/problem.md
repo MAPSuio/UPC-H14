@@ -1,4 +1,6 @@
-# Quidditch breakup
+# Quidditch breakup [hard]
+__Problem ID__: _quid_
+
 ![](../images/quid.png)
 
 As every other norwegian highschool senior, Svein is in a class that is about

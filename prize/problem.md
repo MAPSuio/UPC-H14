@@ -1,4 +1,6 @@
 # UPC prize commitee
+__Problem ID__: _prize_
+
 ![](../images/prize.png)
 
 The prize commitee at UPC has been hard at work getting as many prizes for the

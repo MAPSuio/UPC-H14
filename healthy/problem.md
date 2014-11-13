@@ -1,4 +1,6 @@
 # A healthy supply of ministers
+__Problem ID__: _healthy_
+
 ![](../images/healthy.png)
 
 Erna Solberg needs your help running the government, specifically with running

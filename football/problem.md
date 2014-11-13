@@ -1,5 +1,7 @@
 # I'd rather walk alone
- ![](../images/walkalone.jpg)
+__Problem ID__: _football_
+
+![](../images/walkalone.jpg)
 
 One evening you're visiting your uncle, you find yourself exploring his dark
 basement. In a hidden drawer along some football cards you discover some old

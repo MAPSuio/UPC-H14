@@ -1,4 +1,6 @@
 # Something, something network
+__Problem ID__: _socket_
+
 Most applications in 2014 often have to communicate with servers or other
 clients. An important aspect of this communication is to have a well defined
 protocol, so that messages are understood correctly by all parties.

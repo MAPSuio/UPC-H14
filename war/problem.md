@@ -1,4 +1,6 @@
 # War
+__Problem ID__: _war_
+
 ![](../images/war.jpg)
 
 Your son Mike is a really great kid but he loves to play the classic card game

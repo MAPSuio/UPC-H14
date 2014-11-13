@@ -1,4 +1,6 @@
-# Artificial three-year-old
+# Artificial three-year-old [easy]
+__Problem ID__: _artifi_
+
 ![](../images/artifi.png)
 
 You've been challenged to write a program that simulates a typical

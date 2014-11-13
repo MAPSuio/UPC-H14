@@ -1,4 +1,6 @@
 # The pinmaker 2
+__Problem ID__: _pinmake2_
+
 (See _The pinmaker_ for full introduction)
 
 ![](../images/pinmaker.jpg)

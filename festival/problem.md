@@ -1,4 +1,6 @@
 # Festival area
+__Problem ID__: _festival_
+
 ![](../images/festival.png)
 
 Arranging a festival is a lot of work. You have to book artists and
