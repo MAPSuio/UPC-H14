@@ -1,15 +1,14 @@
 # Kristiansand road work
+Once the map has been parsed, this problem can be solved using simple [Breadth-first
+search](http://en.wikipedia.org/wiki/Breadth-first_search).
 
-A good solution to this problem is to do a breadth first search from both S and G.
-This is done by adding S and G to a FIFO queue, and then processing the queue one element at a time.
+Add the starting position to a queue and mark it as visited.
 
-When the searches intersects, you have a solution. When the queue runs empty without any solutions, there is no solution.
+While the queue is not empty;
+    - Take out the next position from the queue, add all unvisited neighboring
+    positions to the queue, store the distance from the start position
+    - Stop searching if G is encountered
 
-This was implemented by counting up from 0 from S, so that S's neighbors were marked as 1, and the neighbors of 1 are 2.
-The same way, this implementation counted down from G, so that G's neighbors were -1, and the neighbors of -1 were -2.
-When trying to mark a call, first checking the cell's value will give you information on three scenarios:
-* 0: Never visited before, mark this and add it to the queue
-* same as your sign: You have already visited it earlier. By the nature of the search, the fastest way is already found, so ignore this
-* Opposite sign: The search has intersected, so return the sum of the absolute value of the cell, and the absolute value that you would mark it as if it was 0, minus one. With this, the search is over.
-
-Before you do the search, make sure to return 0 in the case that S and G are neighbors.
+When the search stops, one of two things has happened:
+- We encountered G, which means that we've found the shortest path
+- Have haven't encountered G, which means that it is impossible to find a route

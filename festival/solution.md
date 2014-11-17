@@ -1,10 +1,5 @@
 # Festival area
+This is just a matter of finding the area of a polygon. Note that the polygon
+is not regular, and not necessarily convex.
 
-Implement http://en.wikipedia.org/wiki/Shoelace_formula.
-
-Shoelace formula pseudocode:
-* Points: [a, b, c, d]
-* Pairs: \[a, b\] \[b, c\] \[c, d\] \[d,a\]
-* for all pairs as a, b
- * sum += a.x*b.y - b.x*a.y
-* sum = abs(sum)/2
+This can for instance be done by implementing [Gauss' area formula](http://en.wikipedia.org/wiki/Shoelace_formula).
